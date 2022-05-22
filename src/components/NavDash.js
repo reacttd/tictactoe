@@ -7,6 +7,7 @@ import {GiShadowFollower} from 'react-icons/gi';
 import {BiRepost} from 'react-icons/bi';
 import {GiPostStamp} from 'react-icons/gi';
 import {AiFillDashboard} from 'react-icons/ai';
+import { BiLogInCircle } from 'react-icons/bi'
 
 const NavDash = (props) => {
     return(        
@@ -21,6 +22,7 @@ const NavDash = (props) => {
             <Link to="/followers" style={styles.Link}><GiShadowFollower /></Link>
             <Link to="/reposts" style={styles.Link}><BiRepost /></Link>
             <Link to="/post" style={styles.Link}><GiPostStamp /></Link>
+            <Link to="/form" style={styles.Link}><BiLogInCircle /></Link>
         </nav>
     );
 }
@@ -35,6 +37,7 @@ const styles = {
         alignItems: 'flex-start',
         // justifyContent: 'flex-start',
         height:'100vh',
+        // width:'20%',
         padding: '2rem',
         backgroundColor:'black',
         color:'#e1affd',

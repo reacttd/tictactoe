@@ -42,20 +42,18 @@ function Post() {
     };
     return (
         <section style={styles.container}>
-            <h1 style={styles.pageTitle}>{pageTitle}</h1>
-            {/* <input type="text" /> */}
-
+            <h1>{pageTitle}</h1>
             <PostForm
                 addPost={addPost} 
             />
             {myPost.map((myPost, id) => (
                 <PostList
-                    key={id}
-                    id={id}
-                    myPost={myPost}
-                    removePost={removePost} 
+                key={id}
+                id={id}
+                myPost={myPost}
+                removePost={removePost} 
                 />
-            ))}
+                ))}
         </section>
     );
 }
@@ -63,10 +61,11 @@ export default Post;
 
 const styles = {
     container:{
-        display: 'flex',
-        flexDirection:'column',
-        width:'50%',
-        justifyContent:'center',
+        // display: 'flex',
+        // flexDirection:'column',
+        // alignItems: 'center',
+        // width:'50%',
+        // justifyContent:'center',
         // height:'100vh',
         backgroundColor: 'whitesmoke',
         boxShadow:'0 4px 8px 0 rgba(225, 175, 253, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
@@ -79,21 +78,21 @@ const styles = {
 
     },
     myPost:{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
+        // display: 'flex',
+        // flexDirection: 'column',
+        // justifyContent: 'center',
         // margin:'10%'
     },
     pageTitle: {
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'row-start',
-        fontSize: '2rem'
+        // display: 'flex',
+        // flexDirection: 'row',
+        // alignItems: 'row-start',
+        // fontSize: '2rem'
     },
     aImg:{
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: '',
-        color: 'aqua'
+        // display: 'flex',
+        // flexDirection: 'column',
+        // backgroundColor: '',
+        // color: 'aqua'
     }
 }

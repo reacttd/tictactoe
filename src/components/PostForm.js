@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import MyBtn from '../buttons/MyBtn';
-
-
+// import MyBtn from '../buttons/MyBtn';
+// import { BsFilePost } from 'react-icons/bs';
+// import { FaComment } from 'react-icons/fa';
+// import { MdPostAdd } from 'react-icons/md';
+// import ButtonSubmit from '../buttons/ButtonSubmit';
 
 function PostForm({ addPost }) {
     const [value, setValue] = useState('');
@@ -15,16 +17,15 @@ function PostForm({ addPost }) {
 
     return (
         <form onSubmit={validateForm} style={styles.PostForm}>            
-            <h1>Add Post:</h1>
+            <p>Add Post:</p>
             <input 
                 type="text"
                 style={styles.input}
                 value={value}
                 onChange={e => setValue(e.target.value)} 
             /> 
-            {/* <div style={styles.myBtn}> */}
-                <MyBtn btnText="Add Post"/>
-            {/* </div> */}
+            {/* <ButtonSubmit btnSubmit="Post" /> */}
+
         </form>
     );
 }
@@ -33,30 +34,42 @@ export default PostForm;
 
 const styles = {
     PostForm: {
-        display: 'flex',
-        displayDirection:'column',
-        backgroundColor: 'whitesmoke',
-        borderRadius: '2%',
-        borderColor: '2px solid purple'
+        // display: 'flex',
+        // displayDirection:'column',
+        // backgroundColor: 'black',
+        // borderRadius: '8px',
+        boxShadow:'0 4px 8px 0 rgba(225, 175, 253, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        // height: '60%',
+        width: '300px',
+        color: 'rgba(225, 175, 253, 1.0)'
+        // justifyContent: 'space-evenly',
         
     },
     input: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'flex-end',
+        // display: 'flex',
+        // flexDirection: 'row',
+        // justifyContent: 'flex-start',
+        // alignItems:'flex-start',
+
+        // color: 'rgba(225, 175, 253, 1.0)'
+        // flexDirection: 'column',
     },
-    myBtn:{
-        display: 'flex',
-        flexDirection: 'column',
-        padding: '1rem',
-        backgroundColor: 'pink',
-        color: 'aqua',
-        margin: '2%'
+    btnCard:{
+        // display: 'flex',
+        // flexDirection: 'row',
+        // padding: '1rem',
+        // backgroundColor: 'black',
+        // color: 'aqua',
+        // margin: '2%'
     },
-    btnText:{
-        color: 'aqua'
-    }
+    // sign: {
+    //     fontSize: '2rem',
+    //     color: '#e1affd',
+    //     margin: '2%'
+    // },
+    // btnText:{
+    //     color: 'aqua'
+    // }
 
 }
 //     const [aName, setaName] = useState('')

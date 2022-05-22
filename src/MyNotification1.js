@@ -1,96 +1,136 @@
 
-import { Routes, Route } from 'react-router-dom';
-import HeaderDash from './components/HeaderDash';
-import NavDash from './components/NavDash';
-import Dashboard from './pages/Dashboard';
-// import Views from './pages/Views';
-import Followers from './pages/Followers';
-import Likes from './pages/Likes';
-import MyAds from './components/MyAds';
-import Yeat from './images/Yeat.jpeg';
-import Concert from './images/concert.jpg';
-import Butterflies from './images/butterflies.JPG';
-import Reposts from './pages/Repost';
-import Settings from './pages/Settings';
-import Post from './pages/Post';
-import Form from './components/Form';
-// import Footer from './components/Footer';
+import { useEffect, useState } from 'react';
 
-// import LoginSignup from './components/LoginSignup';
-// import MagicButtons from './buttons/MagicButtons';
-// import RepostForm from './components/RepostsForm';
+import './App.css';
 
+function  MyNotifications1() {
+  const CLIENT_ID = "b3f7a6dc943f44f1ac448030235fd76d"
+  const REDIRECT_URI = "http//localhost:8888/callback"
+  const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize"
+  const RESPONSE_TYPE = "token"
 
+  const [token, setToken] = useState("")
 
-// import LikesForm from './components/LikesForm';
-// import LikesForm from './components/LikesForm';
-// import PostList from './components/PostList';
-// import PostArticle from './components/PostArticle';
+  useEffect(() => {
+    const hash = window.location.hash
+    let token = window.localStorage.getItem("token")
 
-function App() {
+    if (!token && hash) {
+        token = hash.substring(1).split("&").find(elem => elem.startsWith("access_token")).split("=")[1]
+
+        window.location.hash = ""
+        window.localStorage.setItem("token", token)
+    }
+
+    setToken(token)
+
+}, [])
+
+const logout = () => {
+  setToken("")
+  window.localStorage.removeItem("token")
+}
+
 return (
-  <div>  
-{/* <MagicButtons /> */}
-    <HeaderDash pageTitle="tsbam" style={styles.H1} placeholder="Search..."/>
-    <section style={styles.container}>
-      <NavDash /> 
-      <main style={styles.main}>       
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="dashboard" element={<Dashboard />} />
-          {/* <Route path="views" element={<Views />} /> */}
-          <Route path="likes" element={<Likes />} />
-          <Route path="followers" element={<Followers />} />
-          <Route path="reposts" element={<Reposts />} />
-          <Route path="settings" element={<Settings />} />
-          <Route path="post" element={<Post />} />
-          <Route path="form" element={<Form />} />
-        </Routes>
-        </main>
-          <aside style={styles.adscontainer}>
-            <MyAds title="Trapstar Bam" info="Live at the Orange Peel" img={Concert} alt="Trapstar Bam concert ad" />
-            <MyAds title="Yeat Concert" info="Get Tickets Online" img={Yeat} alt="Yeat concert ad" />
-            <MyAds title="Butterflies" info="New Release" img={Butterflies} alt="Bam new album cover" />
-          </aside>
-      </section>
-      {/* <Footer /> */}
-    </div>
-  );
+  <div className="App">
+      <header className="App-header">
+          <h1>Spotify React</h1>
+          {!token ?
+              <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login
+                  to Spotify</a>
+              : <button onClick={logout}>Logout</button>}
+      </header>
+  </div>
+);
 }
 
-export default App;
+export default MyNotifications1;
 
-const styles = {
-container:{
-  display:'flex',
-  flexDirection: 'row',
-  // flex: 3,
- justifyContent: 'space-between',
- height:'100vh',
- background:'black',
- color: '#E0AFFD', 
- overflow:'hidden'
-},
-//  '@media (min-width: 1024px)': {
-//    button: {
-//      fontSize: 16
-//    }
-  // },
-main:{
-  display:'flex',
-  flex: 2,
-  // flex: 3,
-  flexDirection: 'column',
-  alignContent:'center',
-  // overFlow :'scroll',
-  margin:'0%',
-  padding: '2%',
-  // width:'100%',
-},
-adscontainer:{
-  marginRight: '2%'
-}
-}
+
+
+
+
+
+// import { Routes, Route } from 'react-router-dom';
+// import HeaderDash from './components/HeaderDash';
+// import NavDash from './components/NavDash';
+// import Dashboard from './pages/Dashboard';
+// import Views from './pages/Views';
+// import Followers from './pages/Followers';
+// import Likes from './pages/Likes';
+// import MyAds from './components/MyAds';
+// import Yeat from './images/Yeat.jpeg';
+// import Concert from './images/concert.jpg';
+// import Butterflies from './images/butterflies.JPG';
+// import Reposts from './pages/Reposts';
+// import Settings from './pages/Settings';
+// import Post from './pages/Post';
+// // import LikesForm from './components/LikesForm';
+// // import LikesForm from './components/LikesForm';
+// // import PostList from './components/PostList';
+// // import PostArticle from './components/PostArticle';
+
+// function App() {
+// return (
+//   <div>  
+//     <HeaderDash pageTitle="tsbam" style={styles.H1} placeholder="Search..."/>
+//     <section style={styles.container}>
+//       <NavDash /> 
+//       <main style={styles.main}>        
+//         <Routes>
+//           <Route path="/" element={<Dashboard />} />
+//           <Route path="dashboard" element={<Dashboard />} />
+//           <Route path="views" element={<Views />} />
+//           <Route path="likes" element={<Likes />} />
+//           <Route path="followers" element={<Followers />} />
+//           <Route path="reposts" element={<Reposts />} />
+//           <Route path="settings" element={<Settings />} />
+//           <Route path="post" element={<Post />} />
+//         </Routes>
+//         </main>
+//           <aside style={styles.adscontainer}>
+//             <MyAds title="Trapstar Bam" info="Live at the Orange Peel" img={Concert} alt="Trapstar Bam concert ad" />
+//             <MyAds title="Yeat Concert" info="Get Tickets Online" img={Yeat} alt="Yeat concert ad" />
+//             <MyAds title="Butterflies" info="New Release" img={Butterflies} alt="Bam new album cover" />
+//           </aside>
+//       </section>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// const styles = {
+// container:{
+//   display:'flex',
+//   flexDirection: 'row',
+//   // flex: 3,
+//  justifyContent: 'space-between',
+//  height:'100vh',
+//  background:'black',
+//  color: '#E0AFFD', 
+//  overflow:'hidden'
+// },
+// //  '@media (min-width: 1024px)': {
+// //    button: {
+// //      fontSize: 16
+// //    }
+//   // },
+// main:{
+//   display:'flex',
+//   flex: 2,
+//   // flex: 3,
+//   flexDirection: 'column',
+//   alignContent:'center',
+//   // overFlow :'scroll',
+//   margin:'0%',
+//   padding: '2%',
+//   // width:'100%',
+// },
+// adscontainer:{
+//   marginRight: '2%'
+// }
+// }
 
 // import { Inline } from './components/Inline';
 // import { useState, useEffect } from 'react';

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import MyHeader from '../components/MyHeader';
+import MyHeader from './components/MyHeader';
 import MyNav from '../components/MyNav';
-import MyAds from '../components/MyAds';
-import PostForm from '../components/PostForm';
+import MyAds from './components/MyAds';
+import PostForm from './components/PostForm';
 // import AvatarIcon from './images/tsbam.png';
 // import MyFormPost from './components/MyFormPost'
 import Concert from './images/concert.jpg';
@@ -12,9 +12,9 @@ import Yeatpreset from './images/yeatpreset.png'
 import TrapstarM from './images/tsbamMamba.png';
 import Simplify from './images/simplify.png';
 import Call from './images/call.png';
-import ArtistArticle from '../components/ArtistArticle';
+import ArtistArticle from './components/ArtistArticle';
 
-class Notifications2 extends Component{
+class App extends Component{
 
   state={
     // 1.Create an array in the state to store the list items
@@ -109,7 +109,7 @@ class Notifications2 extends Component{
       )
     }
   }
-export default Notifications2;
+export default App;
 
 const styles = {
   pgTitle: {

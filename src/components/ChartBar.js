@@ -41,14 +41,14 @@ export default ChartBar;
 const styles = {
     card:{
       background: 'whitesmoke',
-      width: '30%',
+      // width: '30%',
       display: 'flex',
       flexDirection: 'column',
       // float: 'left',
       alignContent: 'space-between',
-      padding: '1rem',
+      // padding: '1rem',
       paddingBottom: '1rem',
-      padding: '8rem',
+      padding: '10rem',
       // justifyContent:'center',
       marginTop: '10%',
       marginBottom: '2100px',

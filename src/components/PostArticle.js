@@ -1,34 +1,35 @@
-import react from 'react';
-import Simplify from './images/simplify.png';
+import React from 'react';
+import MyBtn from '../buttons/MyBtn';
+// import Simplify from './images/simplify.png';
 
 const PostArticle = props => {
     return (
-        <article style={styles.myArticle}>
-            <img src={Simplify} alt="Trapstar Bam" />
-            <h1>Simplify</h1>
-            <p>Trapstar Bam at the Orange Peel</p>
+        <article style={styles.myArticle}>            
+            <img src={myPost.aImg} alt={myPost.aAlt} />
+            <h1>{myPost.post}</h1>
+            <p>{myPost.aDescr}</p>
             <div style={styles.buttons}>
-                <button type="submit" style={styles.cardButton}>Share</button>
-                <button type="submit" style={styles.cardButton}>Learn More</button>
+                <MyBtn myBtn="Edit" />
+                <MyBtn myBtn="Delete" />
             </div>
         </article>
     )
 }
 export default PostArticle;
 
-const styles ={
+const styles={
     myArticle:{
         display:'flex',
-        flexDirection: 'column',
-        backgroundColor: 'whitesmoke',
-        borderRadius: '4px',
-        color: 'aqua',
-        width: '250px',
-        padding: '1%',
-        justifyContent: 'space-between',
-        textAlign: 'center',
-        margin: '5%'
-   },
+        flexDirection:'column',
+        width:'250px',
+        padding:'1%',
+        backgroundColor:'black',
+        color:'pink',
+        justifyContent:'space-between',
+        borderRadius:'5px',
+        boxShadow:'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        textAlign:'center'
+    },
    buttons:{
     display: 'flex',
     flexDirection: 'row',

@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "../components/Form";
 
 function Followers() {
     const [pageTitle] = ['Followers'];
@@ -6,6 +7,7 @@ function Followers() {
         <section style = {styles.container}>
             <div style={styles.pgTitle}>
                 <h1>{pageTitle}</h1>
+                <Form />
                 <p>Some stuff here</p>
                 <p>Some stuff here</p>
             </div>

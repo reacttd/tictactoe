@@ -1,98 +1,110 @@
-import React, { useState } from "react";
-// import ButtonCard from "../buttons/ButtonCard";
-// import ButtonStandard from "../ButtonStandard";
-// import MyBtn from './buttons/MyBtn'
+// import React from 'react';
 
-export const RepostsForm = () => {
-  const [aList, setaList] = useState("");
+// const RepostsForm = () => {
+// <div class="frame">
+//   <button class="custom-btn btn-1">Read More</button>
+//   <button class="custom-btn btn-2">Read More</button>
+//   <button class="custom-btn btn-3"><span>Read More</span></button>
+//   <button class="custom-btn btn-4"><span>Read More</span></button>
+//   <button class="custom-btn btn-5"><span>Read More</span></button>
+//   <button class="custom-btn btn-6"><span>Read More</span></button>
+//   <button class="custom-btn btn-7"><span>Read More</span></button>
+//   <button class="custom-btn btn-8"><span>Read More</span></button>
+//   <button class="custom-btn btn-9">Read More</button>
+//   <button class="custom-btn btn-10">Read More</button>
+//   <button class="custom-btn btn-11">Read More<div class="dot"></div></button>
+//   <button class="custom-btn btn-12"><span>Click!</span><span>Read More</span></button>
+//   <button class="custom-btn btn-13">Read More</button>
+//   <button class="custom-btn btn-14">Read More</button>
+//   <button class="custom-btn btn-15">Read More</button>
+//   <button class="custom-btn btn-16">Read More</button> 
+// </div>
+// }
 
+// import React from 'react';
+// import AvatarIcon from '../images/tsbam.png';
+// import { RiEditCircleFill } from 'react-icons/ri';
 
+// function RepostForm() {
+//   return (
+//         <section>
+//             <div className='row m-0 content-center'>
+//               <div className="col-md-6 mt-5 mb-5">
+//                 <div className='form-area'>
+//                   <div className='form-inner'>
+//                     <form>
+//                       <h4 className='form-heading mb-4 text-primary text-center'>Sign Up</h4>
 
-  const validateForm = (e) => {
-    e.preventDefault();
-    if (!aList) return;
-    addaList(aList);
-    setaList("");
-  };
-  return (
-    <form onSubmit={validateForm} style={styles.repostsForm}>
-      <p>Add Reposts:</p>
+//                       <div className='row'>
+//                         <div className='col-lg-12'>
+//                           <div className='form-group text-center'>
+//                             <div className='userprofile'>
+//                               <img src={AvatarIcon} alt="Dashboard" />
+//                               <div className='profile-btn'>
+//                                 <div>{<RiEditCircleFill />}</div>
+//                                 <input type="file"
+//                                 name="userImage" 
+//                                 className="emoji" 
+//                                />
+//                               </div>
+//                             </div>
+//                           </div>
+//                         </div>
+//                         <div className="col-lg-6">
+//                           <div className="form-group">
+//                             <label className='d-block'>First Name</label>
+//                             <input 
+//                               type="text" 
+//                               name="firstname" 
+//                               className='form-control' 
+//                             />
+//                           </div>
+//                         </div>
+//                         <div className="col-lg-6">
+//                           <div className="form-group">
+//                             <label className='d-block'>Last Name</label>
+//                             <input 
+//                               type="text" 
+//                               name="lastname" 
+//                               className='form-control' 
+//                             />
+//                           </div>
+//                         </div>
+//                         <div className="col-lg-6">
+//                           <div className="form-group">
+//                             <label className='d-block'>Email</label>
+//                             <input 
+//                               type="email" 
+//                               name="email" 
+//                               className='form-control' 
+//                             />
+//                           </div>
+//                         </div>
+//                         <div className="col-lg-6">
+//                           <div className="form-group">
+//                             <label className='d-block'>Password</label>
+//                             <input 
+//                               type="password" 
+//                               name="password" 
+//                               className='form-control' 
+//                             />
+//                           </div>
+//                         </div>  
+//                       </div>
+//                     </form>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//       </section>
+//   )
+// }
+// export default RepostForm;
 
-      aList: [
-      
-
-  
-
-
-      {/* <MyAvatar AvatarIcon={AvatarIcon} avatarAlt="avatar" name="tsbam" /> */}
-      {/* 
-      <img style={styles.avatar} src={props.avatar} alt="alt avatar" />
-      <div style={styles.inputContainer}> */}
-      <input
-        type="text"
-        style={styles.input}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
-      <input
-        name="aDescr"
-        value={props.aDescr}
-        onChange={props.getInputdescr}
-        style={styles.input}
-        placeholder="Description"
-      />
-      <input
-        // name="aImg"
-        value={props.aImg}
-        onChange={props.getInput}
-        style={styles.input}
-        placeholder="Image Upload"
-      />
-      <ButtonCard buttonCard="Add Post" />
-
-      <ButtonStandard {...props} />
-    </form>
-  );
-}
-export default RepostsForm;
-
-const styles = {
-  myForm: {
-    display: "flex",
-    flexDirection: "column",
-    // alignContent:'center',
-    justifyContent: "space-between",
-    // marginRight:'5%',
-    marginTop: "0px",
-    width: "400px",
-    paddingTop: "2%",
-    paddingBottom: "2%",
-    paddingRight: "10%",
-    paddingLeft: "10%",
-    backgroundColor: "black",
-    color: "rgb(163,173,194)",
-    fontSize: "16px",
-    borderRadius: "5px",
-    boxShadow: "1px 6px 1px 1px rgba(0, 0, 255, .1)"
-  },
-  MyAvatar: {
-    display: "flex",
-    flexDirection: "row",
-    width: "75px",
-    height: "75px",
-    borderRadius: "50%",
-    marginBottom: "1rem"
-  },
-  inputContainer: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    width: "100%",
-    marginLeft: "%",
-    marginBottom: "3%"
-  },
-  input: {
-    padding: "1%",
-    margin: "1%"
-  }
-};
+// const styles = {
+//   myAvatar:{
+//     width:'100px',
+//     height:'100px',
+//     borderRadius:'50%'
+//   },
+// }

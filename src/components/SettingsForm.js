@@ -171,7 +171,7 @@ const styles = {
         flexDirection: 'column',
         background: 'whitesmoke',
         // justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         borderRadius: '1rem',
         boxShadow: '0 6px 4px 0 rgba(225, 175, 253, 1.0), 0 3px 10px 0 rgba(0, 0, 0, 0.19)',
         border: '1px solid gray',

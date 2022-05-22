@@ -1,15 +1,15 @@
-import React from 'react'
-import FormSignup from './FormSignup'
+// import React from 'react'
+// import FormSignup from './FormSignup'
 
-function Form() {
-  return (
-    <div>
-        <FormSignup />
-    </div>
-  )
-}
+// function Form-copy() {
+//   return (
+//     <div>
+//         <FormSignup />
+//     </div>
+//   )
+// }
 
-export default Form;
+// export default Form;
 
 // import { useState } from 'react';
 // import ButtonCard from '../buttons/ButtonCard'; 

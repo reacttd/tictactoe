@@ -4,15 +4,15 @@ import MyBtn from "../buttons/MyBtn";
 
 const MyAds = props => {
     return(
-        <div> 
-        <h1 style={styles.myads}>Advertisements</h1>
-        <article style={styles.myAds}>
-            <img style={styles.img} src={props.img} alt={props.alt} />    
-            <h1>{props.title}</h1>
-            <p>{props.info}</p>
-            <div style={styles.buttons}>
-                <MyBtn btnText="Share" />
-                <MyBtn btnText="Learn More" />
+        <div className="container"> 
+        <h1 className="flex-col m-6 ml-2" style={styles.myads}>Advertisements</h1>
+        <article className="flex-col m-2 justify-center items-center" style={styles.myAds}>
+            <img className="flex-col mb-10" style={styles.img} src={props.img} alt={props.alt} />    
+            <h1 className="mb-4 font-bold text-2xl">{props.title}</h1>
+            <p className="mb-4">{props.info}</p>
+            <div className="mb-4 space-x-4 bg-black" style={styles.buttons}>
+                <MyBtn className="mb-4" btnText="Share" />
+                <MyBtn className="mb-4" btnText="More" />
             </div>    
         </article>
         </div>
@@ -25,15 +25,15 @@ const styles = {
         display:'flex',
         flexDirection:'column',
         justifyContent:'space-around',
-        width:'300px',
+        // width:'20%',
         alignItems: 'center',
         padding:'px',
         marginTop: '10%',
         // marinRight: '80%',
-        backgroundColor:'whitesmoke',
+        backgroundColor:'black',
         color:'#e1affd',
         fontSize:'16px',
-        borderRadius: '2rem',
+        borderRadius: '5px',
         borderColor:'2px solid #e1affd',        
         lineHeight:'.1rem',
         // borderRadius:'2px',
@@ -48,17 +48,18 @@ const styles = {
         width: '290px',
         marginTop: '1%',
         marginBottom: '30px',
-        borderRadius:'2rem',
+        borderRadius:'5px',
         borderColor:'solid 2px #e1affd',
     },
     buttons:{
         display:'flex',
         displayDirection:'row',
-        fontSize:'1rem',
+        fontSize:'.65rem',
         padding:'2%',
         margin:'2px',
-        color:'aqua'
-        // justifyContent:'space-between'
+        marginBottom: "",
+        color:'aqua',
+        justifyContent:'space-between',
         // padding:'2%',
         // justifyContent:'space-between',
     }

@@ -4,7 +4,7 @@ import MyBtn from "./buttons/MyBtn";
 const ArtistArticle=props=>{
     return(
         <article style={styles.myArticle}>
-            <igm src={props.val.aImg} alt={props.val.aAlt} />
+            <img src={props.val.aImg} alt={props.val.aAlt} />
             <h1>{props.val.aName}</h1>
             <p>{props.val.aDescr}</p>
             <div style={styles.buttons}>
