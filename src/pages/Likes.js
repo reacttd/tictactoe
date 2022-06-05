@@ -52,6 +52,11 @@ function Likes() {
                     <LikesForm 
                     addLikes={addLikes}/>
                 </div>
+                <div style={styles.row} >
+                            <Likes style={styles.adcard} title="About TrioWolf" info="Trio wolf stands for HONOR, LOYALTY, and INTEGRITY. We are here to help you build your dreams and make them reality" />
+                            <Likes style={styles.adcard} title="Development" info=""/>
+                            <Likes style={styles.adcard} title="Contact" info=""/>
+                        </div>
                 
                 {myLikes.map((myLikes, id) => (
                     <LikesList
@@ -86,13 +91,13 @@ const styles = {
         // textAlign: 'left'
     },
     listContainer:{
-        alignItems: 'center'
-        // display: 'flex',
-        // flex:2,
-        // flexDirection: 'column',
+        alignItems: 'center',
+        display: 'flex',
+        flex:2,
+        flexDirection: 'row',
         // justifyContent:'center',
-        // alignContent: 'center',
-        // width: '100rem'
+        alignContent: 'center',
+        width: '100rem'
 
     }
 };

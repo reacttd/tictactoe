@@ -1,36 +1,30 @@
 
 import { Routes, Route } from 'react-router-dom';
+import './styles.css'
+// import Theme from "./components/Theme";
+// import styled from "styled-components";
 import HeaderDash from './components/HeaderDash';
 import NavDash from './components/NavDash';
 import Dashboard from './pages/Dashboard';
-// import Views from './pages/Views';
+import Views from './pages/Views';
 import Followers from './pages/Followers';
 import Likes from './pages/Likes';
 import MyAds from './components/MyAds';
 import Yeat from './images/Yeat.jpeg';
 import Concert from './images/concert.jpg';
 import Butterflies from './images/butterflies.JPG';
-import Reposts from './pages/Repost';
+// import Reposts from './pages/Repost';
 import Settings from './pages/Settings';
 import Post from './pages/Post';
-import Form from './components/Form';
-// import Footer from './components/Footer';
-
-// import LoginSignup from './components/LoginSignup';
-// import MagicButtons from './buttons/MagicButtons';
-// import RepostForm from './components/RepostsForm';
-
-
-
-// import LikesForm from './components/LikesForm';
-// import LikesForm from './components/LikesForm';
-// import PostList from './components/PostList';
-// import PostArticle from './components/PostArticle';
+import MyForm from './pages/MyForm';
+// import Form from './pages/Form';
+import SecondaryForm from './pages/SecondaryForm'
+import { ThemeProvider } from 'styled-components';
 
 function App() {
 return (
-  <div>  
-{/* <MagicButtons /> */}
+<ThemeProvider>
+  <div>    
     <HeaderDash pageTitle="tsbam" style={styles.H1} placeholder="Search..."/>
     <section style={styles.container}>
       <NavDash /> 
@@ -38,13 +32,14 @@ return (
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} />
-          {/* <Route path="views" element={<Views />} /> */}
+          <Route path="views" element={<Views />} />
           <Route path="likes" element={<Likes />} />
           <Route path="followers" element={<Followers />} />
-          <Route path="reposts" element={<Reposts />} />
+          {/* <Route path="reposts" element={<Reposts />} /> */}
           <Route path="settings" element={<Settings />} />
           <Route path="post" element={<Post />} />
-          <Route path="form" element={<Form />} />
+          <Route path="myform" element={<MyForm />} />
+          <Route path="secondaryform" element={<SecondaryForm />} />
         </Routes>
         </main>
           <aside style={styles.adscontainer}>
@@ -53,8 +48,8 @@ return (
             <MyAds title="Butterflies" info="New Release" img={Butterflies} alt="Bam new album cover" />
           </aside>
       </section>
-      {/* <Footer /> */}
     </div>
+    </ThemeProvider>
   );
 }
 
@@ -78,10 +73,11 @@ container:{
   // },
 main:{
   display:'flex',
-  flex: 2,
+  // flex: 2,
   // flex: 3,
   flexDirection: 'column',
   alignContent:'center',
+  justifyContent: 'center',
   // overFlow :'scroll',
   margin:'0%',
   padding: '2%',

@@ -1,116 +1,61 @@
 import React from 'react';
 // import { GiFlexibleLamp } from 'react-icons/gi';
-import Uselist from '../Uselist';
+// import Uselist from '../Uselist';
 // import MyAvatar from './MyAvatar';
-import AvatarIcon from '../images/tsbam.png';
+// import AvatarIcon from '../images/tsbam.png';
+// import MagicButtons from '../buttons/MagicButtons';
+import ButtonHover from '../buttons/ButtonHover';
+// import ButtonCard from '../buttons/ButtonCard';
+// import ButtonTwirl from '../buttons/ButtonTwirl';
+// import ButtonStandard from '../buttons/ButtonStandard';
+// import ButtonSmall from '../buttons/ButtonSmall';
+// import PracticeForm from './PracticeForm';
 // import ValidateInfo from './ValidateInfo';
 // import { BiRightArrow } from 'react-icons/bi'
 
 
-const FormSignup = (validate) => {
-const { handleSubmit, errors } = Uselist(validate);
+const FormSignup = () => {
 
   return (
     <section style={styles.container}>
-        <div style={styles.profileHeader}>
-        <img src={AvatarIcon} alt="Dashboard" style={styles.myAvatar} />
-                <h4 style={styles.h4}>tsbam</h4>
-        </div>        
-        <form className='form content-center' onSubmit={handleSubmit} style={styles.formContainer}>
+        <form>
             <div>
-                <h1 className="text-5xl mb-8 text-center">Sign up</h1>
-            </div>
-            <div className='flex-left' style={styles.inputContainer}>
-                <label style={styles.label} htmlFor username="username"
-                className='form-label'>
-                    Username
-                </label>
-                <input 
-                    // type="text" 
-                    // name="username" 
-                    // className='form-input'
-                    style={styles.input}
-                    placeholder='Username' 
-                    // value={values.username}
-                    // onChange={handleChange}
-                />                
-                <input 
-                    type="text" 
-                    style={styles.input}
-                    placeholder='Username' 
-                    // value={values.username}
-                    // onChange={handleChange}
-                />
-            </div>
-            <div style={styles.inputContainer}>
-            <label style={styles.label} htmlFor username="username"
-                className='form-label'>
-                    Username
-                </label>
-
-                    {errors.username && <p>{errors.username}</p>}
-            </div>
-            {/* </div> */}
-            <div className='flex-right' style={styles.row}>
-                <div>
-                    <label style={styles.label} htmlFor name="email"
-                    className='form-label'>
-                        Email
-                    </label>
-                </div>
-                <div>
+                <label style={styles.col} for= "username">Username</label>
                     <input 
-                        type="email" 
-                        name="email" 
-                        className='form-input'
-                        style={styles.input}
-                        placeholder='Email' 
-                        // value={values.email}
-                        // onChange={handleChange}
+                        type="text"
+                        name="username"
+                        style={styles.row}
+                        placeholder="Username"
                     />
-                </div>
+                    <br />
+                <label style={styles.col} for= "email">Email</label>
+                    <input 
+                        type="text"
+                        name="email"
+                        style={styles.row}
+                        placeholder="Email"
+                    />            
             </div>
             <div>
-                <div className='form-inputs' style={styles.row}>
-                    <label style={styles.label} htmlFor name="password"
-                    className='form-label'>
-                        Password
-                    </label>
-                </div>
-                <div>
+                <label style={styles.col} for= "password1">Password</label>
                     <input 
-                        type="password" 
-                        name="password" 
-                        className='form-input'
-                        style={styles.input}
-                        placeholder='Password' 
-                        // value={values.password}
-                        // onChange={handleChange}
+                        type="text"
+                        name="password"
+                        style={styles.row}
+                        placeholder="Password"
                     />
-                </div>
+                    &nbsp;
+                <label style={styles.col} for= "password2">Password</label>
+                    <input 
+                        type="text"
+                        name="email2"
+                        style={styles.row}
+                        placeholder="Confirm Password"
+                    />            
             </div>
             <div>
-                <div className='form-inputs' style={styles.row}>
-                    <label htmlFor username="password2"
-                    className='form-label'>
-                        Confirm Password
-                    </label>
-                </div>
-                <div>
-                    <input 
-                        type="password" 
-                        name="password2" 
-                        className='form-input'
-                        style={styles.input}
-                        placeholder='Confirm password' 
-                        // value={values.password2}
-                        // onChange={handleChange}
-                    />
-                </div>
+                <ButtonHover btnText="Hover" /> 
             </div>
-            <button className='form-input-btn' style={styles.btn} type="submit">
-                Sign up
-            </button>
             <span style={styles.actlogin}className='form-input-login'>
                 Already have an account? Login
             </span>   
@@ -124,11 +69,11 @@ export default FormSignup;
 const styles = {
     container:{
     display: 'flex',
-    flexDirection:'row',
+    flexDirection:'column',
     
-   //  justifyContent:'space-around',
+    // justifyContent:'space-around',
     alignItems:'center',
-    width:'40%',
+    width:'60%',
     margin: '1%',
     padding: '2%',
     background:'whitesmoke',
@@ -137,42 +82,38 @@ const styles = {
     borderColor: '2px solid pink'
 
 },
-inputContainer: {
-   // display:'flex',
-   display:'inline-block',
-   // flexDirection:'row',
-   // borderRadius:'10rem',
-   alignItems:'center',
-   margin:'2%',
-   borderColor: '2px solid pink'
-},
-label:{
+
+col:{
    display: 'block',
-   // border: '1px solid #ccc',
-   boxSizing: 'border-box',
-   // display:'flex',
-   // flexDirection:'row',
-   marginBottom:'1%',
-   marginTop:'2%',
-   fontSize:'26px'
+//    // border: '1px solid #ccc',
+//    boxSizing: 'border-box',
+//    // display:'flex',
+//    // flexDirection:'row',
+//    marginBottom:'1%',
+//    marginTop:'2%',
+//    fontSize:'26px'
    // float:'left'
    // justifyContent:'center',
    // alignItems:'flex-start',
    // alignContent:'flex-end'
 },
-input: {
-   //  padding:'2%',
-   //  margin: '1%',
-    borderRadius:'10%',
-    borderColor: '2px solid pink',         
-   //  width: '25%',
-   padding: '12px 20px',
-   margin: '8px 0',
-   marginBottom:'1rem',
-   display: 'inline-block',
-   border: '1px solid #ccc',
-   boxSizing: 'border-box',
-},
+row:{
+    display:"flex",
+    flexDirection:'row',
+}
+// input: {
+//    //  padding:'2%',
+//    //  margin: '1%',
+//     borderRadius:'10%',
+//     borderColor: '2px solid pink',         
+//    //  width: '25%',
+//    padding: '12px 20px',
+//    margin: '8px 0',
+//    marginBottom:'1rem',
+//    display: 'inline-block',
+//    border: '1px solid #ccc',
+//    boxSizing: 'border-box',
+// },
     // formContainer:{ 
     //     display: 'flex',
     //     flexWrap:'wrap',
@@ -199,17 +140,20 @@ input: {
     //     margin:'4%',
     //     borderRadius:'4px'
     // },
-    actlogin:{
-        marginTop: '12px'
-    },
-    btn:{
-    
-        padding: '8px',
-        fontSize: '18px',       
-        marginBottom: '2px',
-        backgroundColor: 'pink',
-        color: 'grey',
-        marginTop: '12px',
-        borderRadius:'4px'
-    }
+    // actlogin:{
+    //     marginTop: '12px'
+    // },
+    // btn:{
+    //     display:'flex',
+    //     flexDirection:'column',
+    //     justifyContent:'space-betweem',
+    //     alignItems:'center',
+    //     padding: '8px',
+    //     fontSize: '18px',       
+    //     margin: '10px',
+    //     backgroundColor: '',
+    //     color: 'grey',
+    //     marginTop: '12px',
+    //     borderRadius:'4px'
+    // }
 }

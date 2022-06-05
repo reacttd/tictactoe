@@ -1,6 +1,10 @@
 import React from "react";
-import MyBtn from "../buttons/MyBtn";
-// import ButtonCard from './buttons/ButtonCard';
+import ButtonHover from "./buttons/ButtonHover";
+// import MagicButtons from "../buttons/MagicButtons";
+// import MagicButtons from "../buttons/MagicButtons";
+// import ButtonSmall from "../buttons/ButtonSmall";
+// import MyBtn from "../buttons/MyBtn";
+// import ButtonCard from '../buttons/ButtonCard';
 
 const MyAds = props => {
     return(
@@ -11,8 +15,9 @@ const MyAds = props => {
             <h1 className="mb-4 font-bold text-2xl">{props.title}</h1>
             <p className="mb-4">{props.info}</p>
             <div className="mb-4 space-x-4 bg-black" style={styles.buttons}>
-                <MyBtn className="mb-4" btnText="Share" />
-                <MyBtn className="mb-4" btnText="More" />
+                    <ButtonHover className="mb-4" btnText="Share" />
+                    <ButtonHover className="mb-4" btnText="More" />
+
             </div>    
         </article>
         </div>
@@ -26,9 +31,9 @@ const styles = {
         flexDirection:'column',
         justifyContent:'space-around',
         // width:'20%',
-        alignItems: 'center',
+        // alignItems: 'center',
         padding:'px',
-        marginTop: '10%',
+        // marginTop: '10%',
         // marinRight: '80%',
         backgroundColor:'black',
         color:'#e1affd',

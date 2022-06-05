@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import MyBtn from "../buttons/MyBtn";
+import MyBtn from "./buttons/MyBtn";
 // import { BsSignpost } from 'react-icons/bs';
 // import MyAvatar from "./MyAvatar";
 // import AvatarIcon from '../images/tsbam.png';

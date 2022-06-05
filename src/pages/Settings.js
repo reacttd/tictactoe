@@ -48,7 +48,7 @@ const styles = {
     container:{
         display: 'flex', // parent
         // background:'whitesmoke',
-        marginBotton: '2%',  
+        // marginBotton: '2%',  
         marginLeft:'250px',      
         fontSize: '1.5rem',
     // display:'flex',

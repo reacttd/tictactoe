@@ -16,7 +16,7 @@ const styles = {
         backgroundColor: 'whitesmoke',
         color: 'aqua',
         padding: '2%',
-        width:'4rem',
+        width:'30px',
         borderRadius:'4%',
         // border:'2px solid pink',
         height:'20px'

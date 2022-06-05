@@ -1,98 +1,182 @@
-import React, { useState } from 'react';
-import PostForm from '../components/PostForm';
-import PostList from '../components/PostList';
-import TrapstarM from '../images/tsbamMamba.png';
-import Simplify from '../images/simplify.png';
-import Call from '../images/call.png';
+import React, { useState, useEffect } from 'react';
+import { GlobalStyles } from "../components/Global";
+import { Header } from "../components/styles/Header.styled";
+import { Footer } from "../components/styles/Footer.styled";
+import Quotes from "../components/Quotes";
+import {
+    ThemeContainer,
+    ThemeButton,
+} from "../components/styles/ThemeSwitching.styled";
+import { ThemeProvider } from 'styled-components';
+import {
+    light,
+    dark,
+    blue,
+    purple,
+    brown,
+    pink,
+  } from "../components/styles/Theme.styled";
+
+// import React, { useState } from 'react';
+// import PostForm from '../components/PostForm';
+// import PostList from '../components/PostList';
+// import TrapstarM from '../images/tsbamMamba.png';
+// import Simplify from '../images/simplify.png';
+// import Call from '../images/call.png';
+// import PostArticle from '../components/PostArticle';
 // import MyBtn from '../buttons/MyBtn';
 
+
 function Post() {
-    const [pageTitle] = ['Post'];
+    // theme state
+    const [selectedTheme, setSelectedTheme] = useState(light);
 
-    const [myPost, setmyPost] = useState([
-        { 
-            post:'Rockstar Life', 
-            aDescr: 'Trapstar Bam (feat CD Mumba)', 
-            aImg: TrapstarM, 
-            aAlt: 'Trapstar Bam and CD Mumba candid pic' 
-        },
-        { 
-            post: 'Simplify', 
-            aDescr: 'Trapstar Bam (new album cover)', 
-            aImg: Simplify, 
-            aAlt: 'Trapstar Bam in a television photo' 
-        },
-        { 
-            post: 'Call Me Back',
-            aDescr: 'Trapstar Bam (feat CD Mumba)', 
-            aImg: Call, 
-            aAlt: 'Trapstar Bam sitting on a wall' 
-        },
-    ]);
+  // react hook to get the theme selected by the user that is saved in local storage
+  useEffect(() => {
+    const currentTheme = JSON.parse(localStorage.getItem("current-theme"));
+    if (currentTheme) {
+      setSelectedTheme(currentTheme);
+    }
+  }, []);
+    const HandleThemeChange = (theme) => {
+        setSelectedTheme(theme);
+        localStorage.setItem("current-theme", JSON.stringify(theme));
+      };
+ 
 
-    const addPost = post => {
-        const newPost = [...myPost, { post }];
-        setmyPost(newPost);
-    };
-
-    const removePost = id => {
-        const newPost = [...myPost];
-        newPost.splice(id, 1);
-        setmyPost(newPost);
-    };
+    // const [pageTitle] = ['Post'];
     return (
-        <section style={styles.container}>
-            <h1>{pageTitle}</h1>
-            <PostForm
-                addPost={addPost} 
-            />
-            {myPost.map((myPost, id) => (
-                <PostList
-                key={id}
-                id={id}
-                myPost={myPost}
-                removePost={removePost} 
-                />
-                ))}
-        </section>
-    );
-}
-export default Post;
+        <ThemeProvider theme={selectedTheme}>
+        <div className="Post">
+            <GlobalStyles />
+            <Header style={styles.headerContainer}>Game of Thrones Quotes</Header>
+            <ThemeContainer>
+          <span>Themes: </span>
+          <ThemeButton
+            className={`light ${selectedTheme === light ? "active" : ""}`}
+            onClick={() => HandleThemeChange(light)}></ThemeButton>
+          <ThemeButton
+            className={`dark ${selectedTheme === dark ? "active" : ""}`}
+            onClick={() => HandleThemeChange(dark)}></ThemeButton>
+          <ThemeButton
+            className={`blue ${selectedTheme === blue ? "active" : ""}`}
+            onClick={() => HandleThemeChange(blue)}></ThemeButton>
+          <ThemeButton
+            className={`purple ${selectedTheme === purple ? "active" : ""}`}
+            onClick={() => HandleThemeChange(purple)}></ThemeButton>
+          <ThemeButton
+            className={`brown ${selectedTheme === brown ? "active" : ""}`}
+            onClick={() => HandleThemeChange(brown)}></ThemeButton>
+          <ThemeButton
+            className={`pink ${selectedTheme === pink ? "active" : ""}`}
+            onClick={() => HandleThemeChange(pink)}></ThemeButton>
+        </ThemeContainer>
 
+            <Quotes />
+
+            <Footer>
+                <p>
+                    Made with love by <a href="http://bio.link/timonwa">Tisha</a>
+                </p>
+            </Footer>
+        </div>
+        </ThemeProvider>
+    );
+ };
+export default Post;
+ 
 const styles = {
-    container:{
+  headerContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'stretch',
+  }
+}
+
+//     const [myPost, setmyPost] = useState([
+//         { 
+//             post:'Rockstar Life', 
+//             aDescr: 'Trapstar Bam (feat CD Mumba)', 
+//             aImg: TrapstarM, 
+//             aAlt: 'Trapstar Bam and CD Mumba candid pic' 
+//         },
+//         { 
+//             post: 'Simplify', 
+//             aDescr: 'Trapstar Bam (new album cover)', 
+//             aImg: Simplify, 
+//             aAlt: 'Trapstar Bam in a television photo' 
+//         },
+//         { 
+//             post: 'Call Me Back',
+//             aDescr: 'Trapstar Bam (feat CD Mumba)', 
+//             aImg: Call, 
+//             aAlt: 'Trapstar Bam sitting on a wall' 
+//         },
+//     ]);
+
+//     const addPost = post => {
+//         const newPost = [...myPost, { post }];
+//         setmyPost(newPost);
+//     };
+
+//     const removePost = id => {
+//         const newPost = [...myPost];
+//         newPost.splice(id, 1);
+//         setmyPost(newPost);
+//     };
+//     return (
+//         <section style={styles.container}>
+//             <h1>{pageTitle}</h1>
+//             <PostArticle />
+//             <PostForm
+//                 addPost={addPost} 
+//             />
+//             {myPost.map((myPost, id) => (
+//                 <PostList
+//                 key={id}
+//                 id={id}
+//                 myPost={myPost}
+//                 removePost={removePost} 
+//                 />
+//                 ))}
+//         </section>
+//     );
+// }
+
+
+// const styles = {
+//     container:{
         // display: 'flex',
         // flexDirection:'column',
         // alignItems: 'center',
         // width:'50%',
         // justifyContent:'center',
         // height:'100vh',
-        backgroundColor: 'whitesmoke',
-        boxShadow:'0 4px 8px 0 rgba(225, 175, 253, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-        borderRadius:'2%'  
-    },
-    mypost:{
+        // backgroundColor: 'whitesmoke',
+        // boxShadow:'0 4px 8px 0 rgba(225, 175, 253, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        // borderRadius:'2%'  
+    // },
+    // mypost:{
         // display: 'flex',
         // flexDirection: 'column',
         // alignItems: 'row-start'
 
-    },
-    myPost:{
+    // },
+    // myPost:{
         // display: 'flex',
         // flexDirection: 'column',
         // justifyContent: 'center',
         // margin:'10%'
-    },
-    pageTitle: {
+    // },
+    // pageTitle: {
         // display: 'flex',
         // flexDirection: 'row',
         // alignItems: 'row-start',
         // fontSize: '2rem'
-    },
-    aImg:{
+    // },
+    // aImg:{
         // display: 'flex',
         // flexDirection: 'column',
         // backgroundColor: '',
         // color: 'aqua'
-    }
-}
+    // }

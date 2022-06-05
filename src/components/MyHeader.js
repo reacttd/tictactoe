@@ -45,7 +45,7 @@ const styles={
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        marginBottom:'1%',
+        // marginBottom:'1%',
         boxShadow:'0 4px 8px 0 rgba(225, 175, 253, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
     },
     IconImg:{

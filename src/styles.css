@@ -1,0 +1,19 @@
+.Followers-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Followers-logo {
+      animation: App-logo-spin infinite 2s linear;
+    }
+  }
+  
+  @keyframes Followers-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {MdNotifications} from 'react-icons/md';
+import { FaSearch } from 'react-icons/fa'
 import Logo from '../images/LOGO.png';
 import AvatarIcon from '../images/tsbam.png'
 
@@ -11,6 +12,13 @@ const HeaderDash = props => {
             <div style={styles.left}>
                 <img src={Logo} alt="Trapstar Bam Logo" style={styles.Logo} />
                 <h1>Trapstar Bam</h1>                
+            </div>
+            <div style={styles.searchCont}>
+                <span style={styles.inputIcon}><FaSearch/></span>
+                <input
+                    type='text'
+                    style={styles.inputwithIcon}
+                    placeholder="Search"/>
             </div>
             <div style={styles.rightSide}>
                 <MdNotifications style={styles.notify}/>
@@ -34,8 +42,11 @@ const styles={
         flexDirection:'row',
         justifyContent:'space-between',
         alignItems:'center',
-        marginBottom:'1%',
-        boxShadow:'0 4px 8px 0 rgba(225, 175, 253, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        // marginBottom:'1%',
+        boxShadow: '0 0 8px 5px rgb(255,175,253),0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        // clipPath: 'polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%)',
+        clipPath: 'polygon(0% 0%, 120% 0%, 120% 120%, 0% 120%)',
+        // boxShadow:'0 4px 8px 0 rgba(225, 175, 253, 1.0), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
     },
     left:{
         display:'flex',
