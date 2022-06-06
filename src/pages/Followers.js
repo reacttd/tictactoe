@@ -1,9 +1,14 @@
 // import IconImg from '../images/LOGO.png';
-// import React, { useState, useEffect } from 'react';
-import { ThemeProvider } from "styled-components";
-// import Webfont from 'webfontloader';
+// import React, { useState } from 'react';
+// import { createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+// import Splash from '../components/Splash';
+// import React, { Fragment } from 'react';
+// import GlobalStyle from './theme/globalStyle';
 // import styled from 'styled-components';
-// import { GlobalStyle } from '../theme/GlobalStyles';
+// import { createGlobalStyle } from "styled-components";
+// import * as theme from "../components/styles/Theme.styled";
+// import { GlobalStyles } from '../components/Global';
 // import { useTheme } from '../theme/useTheme';
 // import PostArticle from "../components/PostArticle";
 
@@ -48,53 +53,54 @@ import FlipButton from "../components/buttons/FlipButton";
 // import PinkBlackStripes from "../components/buttons/PinkBlackStripes";
 import PastelStripes from '../components/buttons/PastelStripes';
 import CircleButton from "../components/buttons/CircleButton";
-import DiagSlant from "../components/buttons/DiagSlant";
+import DiagSlant from "../components/buttons/DiagSlant"; 
+// import GlobalStyle from "../components/styles/Global.styled";
 // import PlainTwist from '../components/buttons/PlainTwist';
 // import ThemedButton from "../components/buttons/ThemedButton";
 
 
 
-const theme = {
-//     dark: {
-//         darkText: '#292929',
-//         lightText: '#F9F8F8', 
-//         darkBackground: '#2F4550',
-//         lightBackground: '#586F7C',
-//         accent: '#B8DBD9',
-//         buttonBorder: '#B8DBD9',
-//         // primary: '#000',
-//         // text: '#fff',
-//         // borderColor: ' #fff',
 
-//     },
-//     light: {
-//         primary: '#fff',
-//         text: '#000',
-//     },
-//     color: {
-//         primary: 'hotpink',
-//         seconday: 'aqua',
-//         background: '#ccc'
-//     },
-//     LightTheme: {
-//         pageBackground: 'white',
-//         titleColor: '#dc658b',
-//         tagLineColor: 'black'
-//     },
-//     DarkTheme: {
-//         pageBackground: '#282c36',
-//         titleColor: 'lightpink',
-//         tagLineColor: 'lavender'
-//     },
-//     themes: {
-//         light: LightTheme,
-//         dark: DarkTheme,
+    // dark: {
+    //     darkText: '#292929',
+    //     lightText: '#F9F8F8', 
+    //     darkBackground: '#2F4550',
+    //     lightBackground: '#586F7C',
+    //     accent: '#B8DBD9',
+    //     buttonBorder: '#B8DBD9',
+    //     // primary: '#000',
+    //     // text: '#fff',
+    //     // borderColor: ' #fff',
 
-//     }
-}
+    // },
+    // light: {
+    //     primary: '#fff',
+    //     text: '#000',
+    // },
+    // color: {
+    //     primary: 'hotpink',
+    //     seconday: 'aqua',
+    //     background: '#ccc'
+    // },
+
+    // const LightTheme= {
+    //     pageBackground: 'white',
+    //     titleColor: '#dc658b',
+    //     tagLineColor: 'black'
+    // };
+    // const DarkTheme= {
+    //     pageBackground: '#282c36',
+    //     titleColor: 'lightpink',
+    //     tagLineColor: 'lavender'
+    // };
+    // const themes= {
+    //     light: LightTheme,
+    //     dark: DarkTheme,
+
+    // };
 
 
-    // fontFamily: 'Segoe UI',
+
 
 // const Container = styled.div`
 //     margin: 5px auto 5px auto;
@@ -102,17 +108,15 @@ const theme = {
 
 // const rotate = keyframes;
 // ``;
-// GlobalStyle = createGlobalStyle`
-//     button {
-//         font-family: ${(props) => props.theme.fontFamily};
-//     }
-//     * {
-//         margin: 0;
-//         padding: 0;
-//     }
-// `
+const GlobalStyle = createGlobalStyle`
+body {
+    color: ${props => (props.whiteColor ? 'white' : 'black')};
+}
+`
+
 function Followers() {
     const [pageTitle] = ['Followers'];
+    // const [theme, setTheme] = useState("light")
     // const {theme, themeLoaded, getFonts} = useTheme();
     // const [selectedTheme, setSelectedTheme] = useState(theme);
 
@@ -128,9 +132,9 @@ function Followers() {
     //     });
     
     return (
-    
     <ThemeProvider>
-        {/* <GlobalStyle />         */}
+        {/* <Splash theme={theme} setTheme={{setTheme}} /> */}
+        <GlobalStyle whiteColor/>        
     
         <div className='Followers'></div>
             <div>
@@ -411,7 +415,6 @@ function Followers() {
         </div>
         
     </ThemeProvider>
-    
             
     );
 }

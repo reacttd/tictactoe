@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-
-    export const StyledButton=styled.button`
+    export const StyledButton=styled(button)`
     border: 2px solid #ffb6c1;
     background-color: ${(props) => 
         props.variant === 'outline' ? '#000' : '#ffb6c1'};

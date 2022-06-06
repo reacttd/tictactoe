@@ -20,10 +20,15 @@ import MyForm from './pages/MyForm';
 // import Form from './pages/Form';
 import SecondaryForm from './pages/SecondaryForm'
 import { ThemeProvider } from 'styled-components';
+import { GlobalStyle } from './components/Global';
+import React, { Fragment } from 'react';
+
 
 function App() {
 return (
 <ThemeProvider>
+  <Fragment>
+  <GlobalStyle />
   <div>    
     <HeaderDash pageTitle="tsbam" style={styles.H1} placeholder="Search..."/>
     <section style={styles.container}>
@@ -49,6 +54,7 @@ return (
           </aside>
       </section>
     </div>
+    </Fragment>
     </ThemeProvider>
   );
 }
