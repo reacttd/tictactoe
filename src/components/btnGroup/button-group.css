@@ -1,0 +1,31 @@
+.customButton {
+    width: 150px;
+    height: 50px;
+    letter-spacing: 0.5px;
+    background-color: #4426a8;
+    color: white;
+    font-size: 32px;
+    border: 1.5px solid #4426a8;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+.active{
+    background-color: rgb(25, 26, 24);
+    border: 1.5px solid rgb(25, 26, 24);
+    }.customButton {
+        width: 150px;
+        height: 50px;
+        letter-spacing: 0.5px;
+        background-color: #4426a8;
+        color: white;
+        font-size: 32px;
+        border: 1.5px solid #4426a8;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+    
+    .active{
+        background-color: rgb(25, 26, 24);
+        border: 1.5px solid rgb(25, 26, 24);
+        }

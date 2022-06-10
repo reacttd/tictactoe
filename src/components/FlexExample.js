@@ -1,17 +1,19 @@
 import React from "react";
 
-function Followers() {
-    const [pageTitle] = ['Followers'];
+function FlexExample() {
+    // const [pageTitle] = ['FlexExample'];
     return (
-        <section style = {styles.container}>
-            <h1>{pageTitle}</h1>
-            <p>Some stuff here</p>
-            <p>Some stuff here</p>
-        </section>
-    );
+        <div style={[styles.container, {
+            flexDirection: "column"
+        }]}>
+            <button style={{flex: 1, backgroundColor: 'red'}} />
+            <button style={{flex: 2, backgroundColor: 'blue'}} />
+            <button style={{flex: 3, backgroundColor: 'purple'}} />
+        </div>
+    )
 }
 
-export default Followers;
+export default FlexExample;
 
 const styles = {
     container:{

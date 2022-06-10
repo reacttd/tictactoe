@@ -13,14 +13,15 @@ export default Blue3d;
 
 const Blue = styled.button`
 margin:5px;
-width: 130px;
-height: 40px;
+width: 160px;
+height: 70px;
 color: #fff;
 border-radius: 5px;
 padding: 10px 25px;
 font-family: 'Lato', sans-serif;
 font-weight: 500;
 background: transparent;
+font-size: 26px;
 cursor: pointer;
 transition: all 0.3s ease;
 position: relative;
@@ -32,7 +33,7 @@ outline: none;
 --c: #fff; /* text color */
     background: 
     linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
-    #6c98c9; /* background color */
+    #6c98c9 ; /* background color */
     color: #fff;
     border: none;
     transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));

@@ -13,14 +13,14 @@ export default ButtonHoverBlue;
 
 const Hover = styled.button`
 margin:5px;
-  width: 130px;
-  height: 40px;
+  width: 160px;
+  height: 70px;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
   font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  font-size:16px;
+  font-weight: bold;
+  font-size:26px;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -51,7 +51,7 @@ margin:5px;
     right:0;
     height:2px;
     width:0;
-    background: rgb(137, 207, 240);
+    background: light-blue;
     box-shadow:
      -1px -1px 5px 0px #fff,
      7px 7px 20px 0px #0003,

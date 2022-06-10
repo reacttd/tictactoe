@@ -14,7 +14,7 @@ const ArtistArticle=props=>{
         </article>
     );
 }
-export default ArtistArticle
+export default ArtistArticle;
 
 const styles={
     myArticle:{

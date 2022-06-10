@@ -13,7 +13,7 @@ export default ButtonHover;
 
 const Hover = styled.button`
 margin:5px;
-  width: 130px;
+  width: 120px;
   height: 40px;
   color: #fff;
   border-radius: 5px;
@@ -38,34 +38,34 @@ margin:5px;
     background: #e1affd;
     background: linear-gradient(0deg, rgba(225, 175, 253, 1.0) 0%, rgba(0, 0, 0, 0.19) 100%);
   
-  &:hover {
-    color: aqua;
-    background: transparent;
-     box-shadow:none;
-  }
-  &:before,
-  &&:after{
-    content:'';
-    position:absolute;
-    top:0;
-    right:0;
-    height:2px;
-    width:0;
-    background: #e1affd;
-    box-shadow:
-     -1px -1px 5px 0px #fff,
-     7px 7px 20px 0px #0003,
-     4px 4px 5px 0px #0002;
-    transition:400ms ease all;
-  }
-  &:after{
-    right:inherit;
-    top:inherit;
-    left:0;
-    bottom:0;
-  }
-  &:hover:before,
-  &:hover:after{
-    width:100%;
-    transition:800ms ease all;
-  }`
+  // &:hover {
+  //   color: aqua;
+  //   background: transparent;
+  //    box-shadow:none;
+  // }
+  // &:before,
+  // &&:after{
+  //   content:'';
+  //   position:absolute;
+  //   top:0;
+  //   right:0;
+  //   height:2px;
+  //   width:0;
+  //   background: #e1affd;
+  //   box-shadow:
+  //    -1px -1px 5px 0px #fff,
+  //    7px 7px 20px 0px #0003,
+  //    4px 4px 5px 0px #0002;
+  //   transition:400ms ease all;
+  // }
+  // &:after{
+  //   right:inherit;
+  //   top:inherit;
+  //   left:0;
+  //   bottom:0;
+  // }
+  // &:hover:before,
+  // &:hover:after{
+  //   width:100%;
+  //   transition:800ms ease all;
+  // }`
