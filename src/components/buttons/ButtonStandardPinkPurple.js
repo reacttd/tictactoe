@@ -12,12 +12,12 @@ const ButtonStandardPinkPurple=props=>{
 export default ButtonStandardPinkPurple;
 
 const Standard=styled.button`
-margin:5px;
-width: 130px;
-height: 40px;
+// margin:5px;
+width: 180px;
+height: 70px;
 color: #fff;
 border-radius: 5px;
-padding: 10px 25px;
+// padding: 10px 25px;
 font-family: 'Lato', sans-serif;
 font-weight: 500;
 background: transparent;

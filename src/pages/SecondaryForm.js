@@ -1,8 +1,23 @@
 import React from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import StyledButton , { FancyButton, SubmitButton } from '../components/buttons/VishwasButton';
-import { DarkButton , PinkVersion, ThreeD, GhostButton} from '../components/buttons/Button.styles';
-import ButtonGroup from '../components/btnGroup/ButtonGroup';
+import StyledButton , { StyledButtonChanged, FancyButton, SubmitButton, ButtonThemed } from '../components/buttons/VishwasButton';
+import { DarkButton , PinkVersion, ThreeD, GhostButton, MiniThreeD, MiniThreeDGreen, MiniThreeDRed, MiniThreeDYellow, MiniThreeDPurple, MiniThreeDBlue, SmallThreeDGreen, SmallThreeD, SmallThreeDRed, SmallThreeDYellow, SmallThreeDPurple, SmallThreeDBlue, NormalThreeD, NormalThreeDGreen, NormalThreeDRed, NormalThreeDYellow, NormalThreeDPurple, NormalThreeDBlue, LargeThreeD, LargeThreeDGreen, LargeThreeDRed, LargeThreeDYellow, LargeThreeDPurple, LargeThreeDBlue, GreenThreeD, RedThreeD, YellowThreeD, PurpleThreeD, BlueThreeD } from '../components/buttons/Button.styles';
+// import ButtonGroup from '../components/btnGroup/ButtonGroup';
+// import Slant from '../components/buttons/Slant';
+// import BlackPink from '../components/buttons/BlackPink';
+import BubbleGum from '../components/buttons/BubbleGum';
+import FlipButtonHoriz from '../components/buttons/FlipButtonHoriz';
+import DiagSlant from '../components/buttons/DiagSlant';
+import PastelStripes from '../components/buttons/PastelStripes';
+import DiagStripes from '../components/buttons/DiagStripes';
+import PinkBlueStripes from '../components/buttons/PinkBlueStripes';
+import Gummy from '../components/buttons/Gummy';
+import ButtonStandardPinkPurple from '../components/buttons/ButtonStandardPinkPurple';
+// import ButtonGroupPrimaryBlue from '../components/btnGroup/ButtonGroupPrimaryBlue';
+// import PinkBlackStripes from '../components/buttons/PinkBlackStripes';
+// import BubbleGumBlue from '../components/buttons/BubbleGumBlue';
+// import Flipper from '../components/buttons/Flipper';
+// import Moon from '../components/moon/'
 // import IconImg from '../images/LOGO.png';
 // import MovingButton from '../components/buttons/MovingButton';
 // import Rotate from '../components/buttons/Rotate';
@@ -20,86 +35,338 @@ const theme = {
     fontFamily: 'Roboto',
 }
 const GlobalStyle = createGlobalStyle`
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    // font-size:22%;
+    font-family:'Lato', sans-serif;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 1.75rem
+    font-weight: bold;
+    color: #89867e 
+}
 button {
     font-family: ${(props) => props.theme.fontFamily};
 
 }
 `
+// const Section = styled.section`
+//  height: 100vh;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  flex-direction: column;
+//  font-size: 5rem;
+
+//  @media screen and (max-width: 45em) {
+//   font-size: 3rem;
+//  }
+// `
+// const Container = styled.div`
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  position: relative;
+//  min-height: 10rem;
+// `
+
+
 
 const SecondaryForm = props => {
 
-    const printButtonLabel = (event) => {
-        console.log(event.target.name);
-        //do some stuff here
-      };
+    // const printButtonLabel = (event) => {
+    //     console.log(event.target.name);
+    //     //do some stuff here
+    //   };
 
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
         <div className = "secondaryForm">
             <div style={styles.container}>
-            <ButtonGroup buttons={["One", "Two", "Three"]} 
-            doSomethingAfterClick={printButtonLabel}
+            {/* <ButtonGroup buttons={["One", "Two", "Three"]}  */}
+            {/* doSomethingAfterClick={printButtonLabel} */}
             
-        />
-                    <div>
-                        <br />
-                    </div>                
-                    <StyledButton type="submit" style={styles.btn}>Styled Button</StyledButton>
-                    <div>
-                        <br />
-                    </div>
-                    <StyledButton variant='outline' style={styles.btn}>Styled Button</StyledButton>
-                    <div>
-                        <br />
-                    </div>
-                    <FancyButton style={styles.btn} as='a'>Fancy Button</FancyButton>
-                    <div>
-                        <br />
-                    </div>
+        {/* />  */}
+        <section styles={styles.container}>
+            <h1 style={styles.h1mini}>mini</h1>
+            <div style={styles.row}> 
+                <span><MiniThreeD>Button</MiniThreeD></span>
+                <span><MiniThreeDGreen>Button</MiniThreeDGreen></span>                
+                <span><MiniThreeDRed>Button</MiniThreeDRed></span>
+                <span><MiniThreeDYellow>Button</MiniThreeDYellow></span>
+                <span><MiniThreeDPurple>Button</MiniThreeDPurple></span>
+                <span><MiniThreeDBlue>Button</MiniThreeDBlue></span>
+            </div>            
+            <div>
+                <br />
+            </div>
+            <div style={styles.div}>
+                <br />
+            </div>
+
+            <div style={styles.div}>
+                <br />
+            </div>
+            <div style={styles.container}>
+                <h1 style={styles.h1small}>small</h1>
+            <div style={styles.row}>
+                <span><SmallThreeD>Button</SmallThreeD></span>
+                <span><SmallThreeDGreen>Button</SmallThreeDGreen></span>                
+                <span><SmallThreeDRed>Button</SmallThreeDRed></span>
+                <span><SmallThreeDYellow>Button</SmallThreeDYellow></span>
+                <span><SmallThreeDPurple>Button</SmallThreeDPurple></span>
+                <span><SmallThreeDBlue>Button</SmallThreeDBlue></span>
+            </div>
+            </div> 
+            <div>
+                <br />
+            </div>
+            <div style={styles.div}>
+                <br />
+            </div>
+
+            <div style={styles.div}>
+                <br />
+            </div>
+            <h1 style={styles.h1normal}>normal</h1>
+            <div style={styles.row}> 
+                <span><NormalThreeD>Button</NormalThreeD></span>
+                <span><NormalThreeDGreen>Button</NormalThreeDGreen></span>    
+                <span><NormalThreeDRed>Button</NormalThreeDRed></span>
+                <span><NormalThreeDYellow>Button</NormalThreeDYellow></span>
+                <span><NormalThreeDPurple>Button</NormalThreeDPurple></span>
+                <span><NormalThreeDBlue>Button</NormalThreeDBlue></span>
+            </div>            
+            <div>
+                <br />
+            </div>
+            <div style={styles.div}>
+                <br />
+            </div>
+
+            <div style={styles.div}>
+                <br />
+            </div>
+            <div style={styles.container}>
+                <h1 style={styles.h1large}>large</h1>
+            <div style={styles.row}>
+                <span><LargeThreeD>Button</LargeThreeD></span>
+                <span><LargeThreeDGreen>Button</LargeThreeDGreen></span>                
+                <span><LargeThreeDRed>Button</LargeThreeDRed></span>
+                <span><LargeThreeDYellow>Button</LargeThreeDYellow></span>
+                <span><LargeThreeDPurple>Button</LargeThreeDPurple></span>
+                <span><LargeThreeDBlue>Button</LargeThreeDBlue></span>
+            </div>
+            </div> 
+            <div>
+                <br />
+            </div>
+            <div style={styles.div}>
+                <br />
+            </div>
+
+            <div style={styles.div}>
+                <br />
+            </div> 
+            {/* <div>
+                <br />
+            </div> */}
+            <div style={styles.div}>
+                <br />
+            </div>
+            <div style={styles.div}>
+                <br />
+            </div>
+            <div style={styles.container}>
+                <h1 style={styles.h13d}>3-D</h1>
+            {/* <div style={styles.block}>
+                <span><BlockThreeD>Button</BlockThreeD></span>
+                <span><BlockThreeDGreen>Button</BlockThreeDGreen></span>                
+                <span><BlockThreeDRed>Button</BlockThreeDRed></span>
+                <span><BlockThreeDYellow>Button</BlockThreeDYellow></span>
+                <span><BlockThreeDPurple>Button</BlockThreeDPurple></span>
+                <span><BlockThreeDBlue>Button</BlockThreeDBlue></span>
+            </div> */}
+            </div> 
+
+            {/* <div style={styles.div}>
+                <br />
+            </div> */}
+
+            {/* <div style={styles.div}>
+                <br />
+            </div>
+                          */}
+        <div style={styles.row}>
+            <span><ThreeD>Three D</ThreeD></span>                    
+            <span><ThreeD variant='outline'>Blue 3-D</ThreeD></span>
+        </div>
+        <div style={styles.row}>
+            <span><GreenThreeD>Three D</GreenThreeD></span>                    
+            <span><GreenThreeD variant='outline'>Green 3-D</GreenThreeD></span>
+        </div>
+        <div style={styles.row}>
+            <span><RedThreeD>Three D</RedThreeD></span>                    
+            <span><RedThreeD variant='outline'>Red 3-D</RedThreeD></span>
+        </div>
+        <div style={styles.row}>
+            <span><YellowThreeD>Three D</YellowThreeD></span>                    
+            <span><YellowThreeD variant='outline'>Yellow 3-D</YellowThreeD></span>
+        </div>
+        <div style={styles.row}>
+            <span><PurpleThreeD>Three D</PurpleThreeD></span>                    
+            <span><PurpleThreeD variant='outline'>Purple 3-D</PurpleThreeD></span>
+        </div>
+        <div style={styles.row}>
+            <span><BlueThreeD>Three D</BlueThreeD></span>                    
+            <span><BlueThreeD variant='outline'>Blue 3-D</BlueThreeD></span>
+        </div>
+        <div style={styles.row}>                    
+            <span><PinkVersion>Pink 3-D</PinkVersion></span>
+            <span><PinkVersion variant='outline'>Pink 3-D</PinkVersion></span>
+        </div>
+        <div style={styles.row}>
+            <span><GhostButton>Ghost</GhostButton></span>
+            <span><GhostButton variant='outline'>Ghost</GhostButton></span>
+        </div>     
+         <div>
+            <span><FlipButtonHoriz btnText="Flip"/></span>
+            <span><StyledButton type="submit" style={styles.btn}>Styled</StyledButton></span>    
+        </div>
+
+                
+
+            <div>
+                <br />
+            </div>
+                
+            <div>
+                <br />
+            </div>
+                <span>
+                    <StyledButton variant='' style={styles.btn}>Styled</StyledButton>
+                </span>
+            <div>
+                <br />
+            </div>
+                <span>
+                    <FancyButton style={styles.btn} as='a'>Fancy</FancyButton>
+                </span>
+            <div>
+                <br />
+            </div>
+                <span>
                     <DarkButton style={styles.btn}>Dark Button</DarkButton> 
-                    <div>
-                        <br />
-                    </div>
+                </span>
+            <div>
+                <br />
+            </div>
+                <span>
                     <SubmitButton style={styles.btn}>Submit</SubmitButton>
-                    <div>
-                        <br />
-                    </div> 
-                    {/* <MovingButton style={styles.moving}><img src={IconImg} style={styles.logo}alt="logo"></img></MovingButton> */}
-                    <div>
-                        <br />
-                    </div>
-                    {/* <Rotate style={styles.rotate} btnText="Trapstar" />  */}
-                    <div>
-                        <br />
-                    </div>
-                    <ThreeD>Three D</ThreeD>
+                </span>    
+            <div>
+                <br />
+            </div>
+                <span>
+                    <ButtonThemed>Themed</ButtonThemed>
+                </span>
+            <div>
+                <br />
+            </div>
+                <span>
+                    <DiagSlant btnText="Slant" />
+                </span>
+        </section> 
+        
+        <ul style={styles.container}>
+        {/* <ButtonGroup buttons={["One", "Two", "Three"]} 
+            doSomethingAfterClick={printButtonLabel}>
+        </ButtonGroup> */}
+            <br />
+                <li>
+                    {/* <ButtonGroupPrimaryBlue /> */}
+                </li>
 
-                    <div>
-                        <br />
-                    </div>
-                    <ThreeD variant='outline'>Blue 3-D</ThreeD>
-                    <div>
-                        <br />
-                    </div>
-                    <PinkVersion>Pink 3-D</PinkVersion>
-                    <div>
-                        <br />
-                    </div>
-                    <PinkVersion variant='outline'>Pink 3-D</PinkVersion>
-                    <div>
-                        <br />
-                    </div>
-                    <GhostButton>Ghost</GhostButton>
-                    <div>
-                        <br />
-                    </div>
-                    <GhostButton variant='outline'>Ghost</GhostButton>
-                    <div>
-                        <br />
-                    </div>
-                    <ButtonGroup style={styles.btnGroup} buttons={["One", "Two", "Three"]} />
+                <li>
+                    <Gummy btnText="Gummy" />
+                </li>            
+            <div>
+                <br />
+            </div>
+                <li>
+                    <PastelStripes />
+                </li>
+            <div>
+                <br />
+            </div>
+                <li>
+                    <PinkBlueStripes btnText="Stripes"/>
+                </li>
+            <div>
+                <br />
+            </div>
+                <li>
+                    <DiagStripes />
+                </li>    
+            <div>
+                <br />
+            </div>
+                <li> 
 
+                </li>    
+            <div>
+                <br />
+            </div> 
+        </ul>
+        <ul style={styles.container}>  
+        {/* <ButtonGroup buttons={["One", "Two", "Three"]} 
+            doSomethingAfterClick={printButtonLabel}>
+        </ButtonGroup>       */}
+
+            <div>
+                <br />
+            </div>
+                <StyledButtonChanged style={styles.btnchanged}>Changed</StyledButtonChanged>
+            <div>
+                <br />
+            </div>
+        </ul>
+        <ul style={styles.container}>
+            <div>
+                <br />
+            </div>
+                <li>
+                    <BubbleGum btnText="Bubble Gum" />
+                </li>
+            <div>
+                <br />
+            </div>
+                <li>
+                    <DiagStripes btnText="Stripes" />
+                </li>             
+            <div>
+                <br />
+            </div>
+                <li>
+                    <ButtonStandardPinkPurple btnText="Red Purple"/>
+                </li>
+                {/* <MovingButton style={styles.moving}><img src={IconImg} style={styles.logo}alt="logo"></img></MovingButton> */}
+
+                {/* <Rotate style={styles.rotate} btnText="Trapstar" />  */}
+            
+            <div>
+                <br />
+            </div>
+
+            <div>
+                <br />
+            </div>
+        </ul>
             </div>
         </div>
         </ThemeProvider>
@@ -109,21 +376,91 @@ export default SecondaryForm;
 
 const styles={
     container:{
+        position: 'relative',
+        display: 'inline-flex',
         // display: 'flex',
         flexDirection: 'column',
-        // justifyContent: 'center',
-        // width: '20%',
-        background: 'whitesmoke',
-        height: '100vh'
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        // alignItems: 'space-evenly',
+        // width: '30%',
+        background: 'white',
+        borderRadius: '4px',
+        textAlign: 'center',
+        marginBottom: '40px',
+        // height: '100vh',
+        gap: '30px',
+
+        margin: '0 auto'
+    },
+    // container:{
+        // position: 'relative',
+        // display: 'inline-flex',
+        // // display: 'flex',
+        // flexDirection: 'column',
+        // flexWrap: 'wrap',
+        // // justifyContent: 'center',
+        // // width: '30%',
+        // background: 'white',
+        // borderRadius: '4px',
+        // textAlign: 'center',
+        // marginBottom: '40px',
+        // // height: '100vh',
+        // gap: '30px',
+    // },
+    div:{
+        backgroundColor: 'black'
+    },
+    h1mini:{
+        fontSize: '1.75rem',
+        color: '#89867e',
+        marginBottom: '30px'
+    },
+    h1small:{
+        fontSize: '1.75rem',
+        color: '#89867e',
+    },
+    h1normal:{
+        fontSize: '1.75rem',
+        color: '#89867e',
+        marginBottom: '30px',
+    },
+    h1large:{
+        fontSize: '1.75rem',
+        color: '#89867e',
+        marginBottom: '30px',
+    },
+    h13d:{
+        fontSize: '1.75rem',
+        color: '#89867e',
+        marginBottom: '30px',
+    },
+    row:{
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    block:{
+        display: 'flex',
+        // width: '100%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        textAlign: 'center',
+        // display: 'flex',
+        flexDirection: 'column',
+
     },
     btn:{
         // display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
+        // justifyContent: 'space-evenly',
         // width: '130px',
         // height: '70px',
         margin: '10px',
-        textAlign: 'center',
+        // textAlign: 'center',
+    },
+    btnchanged:{
+        textAlign: 'center'
     },
     moving:{
         width:'100px',

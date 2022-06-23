@@ -1,25 +1,18 @@
-import React from 'react';
+// import Butterflies from './images/butterflies.JPG'; 
 
-const Card = () =>
-{
-    <Card style={styles.card}>
-        <CardImage orientation="top" src="/images/tsbam.png" />
-        <CardBody style={styles.body}>
-            <CardTitle>Card Title</CardTitle>
-            <CardText>
-                Some quick example text to build on card title and make up the body of the card.
-            </CardText>
-            <MyBtn btnText="Go Somewhere" style={styles.btn}/>
-        </CardBody>
-    </Card>
-}
-export default Card;
+export default function Card({ item: { id, title, body, image } }) {
 
-const styles={
-    card:{
-        display:'flex',
-        flexDirection:'column',
-        backgroundColor: 'whitesmoke',
-        color: 'aqua'
-    }
+  return (
+    <div>
+        <div>
+            <h2>{title}</h2>
+            <p>{body}</p>
+        </div>
+
+        <div>
+            <img src={`../images/${image}`} alt="" />
+        </div>
+    </div>
+  )
 }
+

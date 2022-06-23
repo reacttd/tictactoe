@@ -12,8 +12,8 @@ export default DiagStripes;
 
 const Diagonal = styled.button`
 margin:5px;
-  width: 130px;
-  height: 40px;
+  width: 180px;
+  height: 70px;
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
@@ -33,9 +33,9 @@ margin:5px;
     background:
     
         repeating-linear-gradient(90deg, transparent, transparent 50px,
-            rgba(0, 255, 255, 0.5) 5px, rgba(0, 255, 255, 0.5) 10px),
+          rgba(189, 142, 183, .7) 5px, rgba(189, 142, 183, .7) 10px),
           transparent 56px, transparent 63px,
-          rgba(0, 255, 255, 0.5) 5px, rgba(0, 255, 255, 0.5) 10px),
+          rgba(189, 142, 183, .7) 5px, rgba(189, 142, 183, .7) 10px),
           transparent 69px, transparent 116px,
           rgba(0,0,0,0.7) 116px, rgba(0,0,0,0.7) 166px),
         repeating-linear-gradient(0deg, transparent, transparent 50px,
@@ -45,9 +45,9 @@ margin:5px;
           transparent 69px, transparent 116px,
           rgba(0,0,0,0.7) 116px, rgba(0,0,0,0.7) 166px),
         repeating-linear-gradient(-45deg, transparent, transparent 5px,
-          rgba(0, 255, 255, 0.5) 5px, rgba(0, 255, 255, 0.5) 10px),
+          rgba(189, 142, 183, .7) 5px, rgba(189, 142, 183, .7) 10px),
         repeating-linear-gradient(45deg, transparent, transparent 5px,
-          rgba(0, 255, 255, 0.5) 5px, rgba(0, 255, 255, 0.5) 10px);
+          rgba(189, 142, 183, .7) 5px, rgba(189, 142, 183, .7) 10px);
   
     background:
         repeating-linear-gradient(90deg, transparent 0 50px,
@@ -63,7 +63,7 @@ margin:5px;
           transparent 69px 116px,
           rgba(0,0,0,0.7) 116px 166px),
         repeating-linear-gradient(-45deg, transparent 0 5px,
-          rgba(0, 255, 255, 0.5) 5px 10px),
+          rgba(189, 142, 183, .7) 5px 10px),
         repeating-linear-gradient(45deg, transparent 0 5px,
           rgba(0, 255, 255, 0.5) 5px 10px);
           

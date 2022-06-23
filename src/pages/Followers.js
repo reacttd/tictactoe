@@ -1,27 +1,89 @@
-import React from "react";
-
+// import IconImg from '../components/MyLogo';
+import NAVbar from "../components/Navbar";
+// import Section from "./components/Section";
+// import dummyText from "./DummyText";
 function Followers() {
-    const [pageTitle] = ['Followers'];
+
     return (
-        <section style = {styles.container}>
-            <h1>{pageTitle}</h1>
-            <p>Some stuff here</p>
-            <p>Some stuff here</p>
-        </section>
+      <div>
+        <NAVbar />
+        
+        {/* <Section
+          title="Section 1"
+          subtitle={dummyText}
+          dark={true}
+          id="section1"
+        />
+        <Section
+          title="Section 2"
+          subtitle={dummyText}
+          dark={false}
+          id="section2"
+        />
+        <Section
+          title="Section 3"
+          subtitle={dummyText}
+          dark={true}
+          id="section3"
+        />
+        <Section
+          title="Section 4"
+          subtitle={dummyText}
+          dark={false}
+          id="section4"
+        />
+        <Section
+          title="Section 5"
+          subtitle={dummyText}
+          dark={true}
+          id="section5"
+        /> */}
+      </div>
     );
-}
+  }
+
 
 export default Followers;
 
-const styles = {
-    container:{
-        display:'flex',
-        flexDirection:'column',
-        height:'100vh',
-        width:'99vh',
-        paddingLeft:'2%'
-    }
-};
+// import { Fragment } from 'react';
+// import ScrollButton from '../components/ScrollButton';
+// import { Content, Header } from '../components/Styles';
+// // import { Flex } from '../components/styles/Flex.styled';
+// // import { Content } from '../components/Styles';
+	
+// function Followers() {
+// return (
+// 	<Fragment>
+// 	    {/* <Header>GeeksForGeeks Scroll To Bottom</Header> */}
+// 	        <ScrollButton />
+// 	            <Content />
+// 	    <Header>Thanks for visiting</Header>
+// 	</Fragment>
+// );
+// }
+	
+// export default Followers;
+
+// const styles = {
+    // header:{
+    //     marginBottom: '2rem',
+    // }
+//     scrollbtn: {
+//         display: 'flex',
+//         justifyContent: 'space-around',
+//     }
+// }
+
+
+// const styles = {
+//     container:{
+//         display:'flex',
+//         flexDirection:'column',
+//         height:'100vh',
+//         width:'99vh',
+//         paddingLeft:'2%'
+//     }
+// };
 
 // // import IconImg from '../images/LOGO.png';
 // // import React, { useState } from 'react';

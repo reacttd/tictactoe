@@ -15,13 +15,14 @@ const FlipButtonHoriz = props => {
 export default FlipButtonHoriz; 
 
 const Flip = styled.button`
+margin: 10px;
     border: none;
-      background: #AFDCEC;
+      background: #9370DB;
       color: #f2f2f2;
       font-size: 22px;
     // padding: 16px;
-    width: 130px;
-    height: 40px;
+    width: 225px;
+    height: 70px;
       border-radius: 5px;
       position: relative;
       box-sizing: border-box;
@@ -33,14 +34,17 @@ const Flip = styled.button`
   &:after {
       top: -100%;
       left: 0px;
-      width: 100%;
+      width: 225px;
+      height: 70px;
     //   padding: 16px 0;
       position: absolute;
-      background: whitesmoke;
-      color: #AFDCEC;
-      border: 6px solid #AFDCEC;
+      background: #f2f2f2;
+      color: #f2f2f2;
+      border: 6px solid #9370DB;
       border-radius: 5px;
+      // text-align: center;
       content: 'Flipped';
+      margin-top: 10px;
       transform-origin: left bottom;
       transform: rotateX(90deg);
   }

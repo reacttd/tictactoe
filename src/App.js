@@ -1,20 +1,26 @@
 
 import { Routes, Route } from 'react-router-dom';
 import HeaderDash from './components/HeaderDash';
+import "./App.css";
 import Dashboard from './pages/Dashboard';
 import Views from './pages/Views';
 import Followers from './pages/Followers';
 import Likes from './pages/Likes';
-import MyAds from './components/MyAds'
+// import MyAds from './components/MyAds';
+import Landing from './pages/Landing';
 // import Reposts from './pages/Reposts';
 import Settings from './pages/Settings';
 import NavDash from './components/NavDash';
-import Concert from './images/concert.jpg';
+// import Concert from './images/concert.jpg';
 // import Yeat from './images/Yeat.png';
 // import Yeatpreset from './images/yeatpreset.png';
 import Form from './pages/Form';
 import SecondaryForm from './pages/SecondaryForm';
-// import PostForm from './components/PostForm';
+// import Home from './pages/Home';
+// import Sidebar from './components/Sidebar';
+// import Navbar from './components/Navbar';
+// import Header from './components/Header';
+import PostForm from './components/PostForm';
 // import { ArtistArticle } from './components/ArtistArticle';
 
 
@@ -24,19 +30,22 @@ function App() {
     <div>
       <HeaderDash pgTitle="tsbam" style={styles.H1} placeholder="Search..." />
         <section style={styles.container}>
+          {/* <Header /> */}
+          {/* <Navbar />   */}
+          {/* <Sidebar /> */}
           <NavDash />
           <main style={styles.main}>
           {/* <Reposts /> */}
           {/* <ArtistArticle /> */}
-          {/* <PostForm /> */}
+          <PostForm />
         
           {/* <PostForm
             getInputname={this.getInputname}
             getInputdescr={this.getInputdescr}
             getInput={this.getInput}
             addItem={this.addItem}
-            btnText="Post" />
-            {item} */}
+            btnText="Post" /> */}
+            {/* {item} */}
             <Routes>
               <Route exact path="/" element={<Dashboard />} />
               <Route path="/Dashboard" element={<Dashboard />} />
@@ -47,13 +56,16 @@ function App() {
               <Route path="/Views" element={<Views />} />
               <Route path="/Form" element={<Form />} />
               <Route path="/SecondaryForm" element={<SecondaryForm />} />
+              <Route path="/Landing" element={<Landing />} />
+              {/* <Home path="/Home" element={<home />} />  */}
             </Routes>
           </main>
           <aside style={styles.adscontainer}>
-              <MyAds title="Trapstar Bam" info="Live at the Orange Peel" img={Concert} alt="Trapstar Bam concert ad" />
+              {/* <MyAds title="Trapstar Bam" info="Live at the Orange Peel" img={Concert} alt="Trapstar Bam concert ad" /> */}
               {/* <MyAds title="Yeat Concert" info="Get Tickets Online" img={Yeat} alt="Yeat concert ad" /> */}
               {/* <MyAds title="Yeat Preset" info="Vocal Mix" img={Yeatpreset} alt="Yeat preset cover" /> */}
             </aside>
+            {/* </Routes> */}
         </section>
     </div>
   );
@@ -66,10 +78,13 @@ const styles = {
     display:'flex',
     flexDirection:'row',
     height:'100vh',
-    background:'black',
-    color: '#E0AFFD',
+    // background:'black',
+    background:'whitesmoke',
+    // color: '#E0AFFD',
+    color: 'gray',
     // color: 'white',
     overflow:'hidden',
+    fontSize: '2rem'
 
   },
   main:{

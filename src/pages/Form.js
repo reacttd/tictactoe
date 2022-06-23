@@ -1,10 +1,12 @@
 //  This is a test for Followers page data
 import { ThemeProvider } from 'styled-components';
+import Header from '../components/Header';
+import GlobalStyle from '../components/styles/Global.styled';
 // import { FaHome } from 'react-icons/fa';
 // import { divide } from 'lodash';
 // import React, { useState } from 'react';
-// import styled from 'styled-components';
-import ButtonGroup from '../components/btnGroup/ButtonGroup';
+import { Container } from '../components/Containter.styled';
+// import ButtonGroup from '../components/btnGroup/ButtonGroup';
 // import StyledButton from '../components/buttons/VishwasButton';
 import Blue3d from "../components/buttons/Blue3d";
 // import BubbleGum from "../components/buttons/BubbleGum";
@@ -37,6 +39,11 @@ import StyledButton from '../components/buttons/VishwasButton';
 
 
 const theme = {
+    colors: {
+        header: '#ebfbff',
+        body: 'fff',
+        footer: '#003333',
+    },
     dark: {
         primary: '#000',
         text: '#fff'
@@ -50,113 +57,122 @@ const theme = {
 const Form = props => {
 // const [pageTitle] = ['Followers'];
 
-    return (
-        <ThemeProvider theme={theme}>
-            {/* <FlexExample /> */}
+return (
+<ThemeProvider theme={theme}>
+<> 
+<GlobalStyle />
+<Header />
+    <Container>
+        {/* <h1>Hello World</h1> */}
+    </Container>
+
+        
+           {/* <FlexExample /> */}
             
         <div className='Form'>
-            <section style={styles.container}>
-                <h1 style={styles.h1}>Blue Theme</h1>
-                <div style={styles.buttonContainer}>
-                    <div style={styles.row}>
+             <section style={styles.container}>
+                 <h1 style={styles.h1}>Blue Theme</h1>
+                 <div style={styles.buttonContainer}>
+                     <div style={styles.row}>
 
-                        <ButtonGroup btnText="1" />
+                         {/* <ButtonGroup btnText="1" /> */}
                         <div>
-                            <br />
-                        </div>
-                        {/* <InputButtonBlue style={styles.icon}><FaHome /></InputButtonBlue> */}
+                             <br />
+                         </div>
+                         {/* <InputButtonBlue style={styles.icon}><FaHome /></InputButtonBlue> */}
 
-                        <StyledButton>Styled Button</StyledButton>
-                        <div>
-                            <br />
-                        </div>
-                            <Blue3d style={styles.btn} btnText="Primary" />
-                        {/* <div>                            
-                            <br />
-                        </div> */}
-                            {/* <BubbleGumBlue style={styles.btn} btnText="Secondary" />  */}
-                        {/* <div>
-                            <br />
-                        </div> */}
-                            {/* <ButtonHoverBlue style={styles.btn} btnText="Success" /> */}
-                        {/* <div>
-                            <br />
-                        </div> */}
-                            {/* <ButtonSmallSuccess style={styles.btn} btnText="Success" />                                   */}
-                        {/* <div>
-                            <br />
-                        </div> */}
-                            {/* <InputButtonBlue /> */}
-                        <div>
-                            <br />
-                        </div>
+                         <StyledButton>Styled Button</StyledButton>
+                         <div>
+                             <br />
+                         </div>
+                             <Blue3d style={styles.btn} btnText="Primary" />
+                         {/* <div>                            
+//                             <br />
+//                         </div> */}
+                             {/* <BubbleGumBlue style={styles.btn} btnText="Secondary" />  */}
+                         {/* <div>
+//                             <br />
+//                         </div> */}
+                             {/* <ButtonHoverBlue style={styles.btn} btnText="Success" /> */}
+                         {/* <div>
+//                             <br />
+//                         </div> */}
+                             {/* <ButtonSmallSuccess style={styles.btn} btnText="Success" />                                   */}
+                         {/* <div>
+//                             <br />
+//                         </div> */}
+                             {/* <InputButtonBlue /> */}
+                         <div>
+                             <br />
+                         </div>
+                     </div>    
+                 </div>
+             </section>
+             <section style={styles.container}>
+                 <h1 style={styles.h1}>Blue Theme</h1>
+                 {/* <div style={styles.buttonContainer}> */}
+                     <div style={styles.row}>
+                         <div>
+                             <br />
+                         </div>
+                             <ButtonHover style={styles.btn} btnText="Styled Button" />
+                         <div>                            
+                             <br />
+                         </div>
+                             <BubbleGumBlue style={styles.btn} btnText="Secondary" /> 
+                         <div>
+                             <br />
+                         </div>
+                             <ButtonHoverBlue style={styles.btn} btnText="Success" />
+                         <div>
+                             <br />
+                         </div>
+                             <ButtonSmallSuccess style={styles.btn} btnText="Success" />                                  
+                         <div>
+                             <br />
+                         </div>
+                             {/* <InputButtonBlue /> */}
+                         <div>
+                             <br />
                     </div>    
-                </div>
-            </section>
-            <section style={styles.container}>
-                <h1 style={styles.h1}>Blue Theme</h1>
-                <div style={styles.buttonContainer}>
-                    <div style={styles.row}>
-                        <div>
-                            <br />
-                        </div>
-                            <ButtonHover style={styles.btn} btnText="Styled Button" />
-                        <div>                            
-                            <br />
-                        </div>
-                            <BubbleGumBlue style={styles.btn} btnText="Secondary" /> 
-                        <div>
-                            <br />
-                        </div>
-                            <ButtonHoverBlue style={styles.btn} btnText="Success" />
-                        <div>
-                            <br />
-                        </div>
-                            <ButtonSmallSuccess style={styles.btn} btnText="Success" />                                  
-                        <div>
-                            <br />
-                        </div>
-                            {/* <InputButtonBlue /> */}
-                        <div>
-                            <br />
-                        </div>
-                    </div>    
-                </div>
-            </section>
-            <section style={styles.container}>
-                {/* <h1>{pageTitle}</h1> */}
-                <h1 style={styles.h1}>Blue Theme</h1>
-                <div style={styles.buttonContainer}>
-                    <div style={styles.row}>
-                        <div>
-                            <br />
-                        </div>
-                            <Blue3d style={styles.btn} btnText="Primary" />
-                        <div>                            
-                            <br />
-                        </div>
-                            <BubbleGumBlue style={styles.btn} btnText="Secondary" /> 
-                        <div>
-                            <br />
-                        </div>
-                            <ButtonHoverBlue style={styles.btn} btnText="Success" />
-                        <div>
-                            <br />
-                        </div>
-                            <ButtonSmallSuccess style={styles.btn} btnText="Success" />                                  
-                        <div>
-                            <br />
-                        </div>
+                 </div>
+             </section>
+             <section style={styles.container}>
+                 {/* <h1>{pageTitle}</h1> */}
+                 <h1 style={styles.h1}>Blue Theme</h1>
+                 <div style={styles.buttonContainer}>
+                     <div style={styles.row}>
+                         <div>
+                             <br />
+                         </div>
+                             <Blue3d style={styles.btn} btnText="Primary" />
+                         <div>                            
+                             <br />
+                         </div>
+                             <BubbleGumBlue style={styles.btn} btnText="Secondary" /> 
+                         <div>
+                             <br />
+                         </div>
+                             <ButtonHoverBlue style={styles.btn} btnText="Success" />
+                         <div>
+                             <br />
+                         </div>
+                             <ButtonSmallSuccess style={styles.btn} btnText="Success" />                                  
+                         <div>
+                             <br />
+                         </div>
                             
-                        <div>
-                            <br />
-                        </div>
-                    </div>    
-                </div>
-            </section>
-        </div>
-        </ThemeProvider>
-    )
+                         <div>
+                             <br />
+                         </div>
+                     </div>    
+                 </div>
+             </section>
+         </div>
+         
+         </>
+         </ThemeProvider>
+)
 
 
 }

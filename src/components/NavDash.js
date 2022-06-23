@@ -8,7 +8,7 @@ import {BiRepost} from 'react-icons/bi';
 import {GiPostStamp} from 'react-icons/gi';
 import {AiFillDashboard} from 'react-icons/ai';
 import { BiLogInCircle } from 'react-icons/bi'
-import { FaUserEdit, FaWpforms } from 'react-icons/fa'
+import { FaUserEdit, FaWpforms, FaPlane } from 'react-icons/fa'
 
 const NavDash = (props) => {
     return(        
@@ -26,6 +26,7 @@ const NavDash = (props) => {
             <Link to="/myform" style={styles.Link}><BiLogInCircle /></Link>
             <Link to="secondaryform" style={styles.Link}><FaUserEdit /></Link>
             <Link to="/Form" style={styles.Link}>{<FaWpforms />}</Link>
+            <Link to="/Landing" style={styles.Link}>{<FaPlane />}</Link>
         </nav>
     );
 }

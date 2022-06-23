@@ -13,13 +13,14 @@ export default Gummy ;
 
 const Gummies = styled.button`
 margin:5px;
-width: 130px;
-height: 40px;
+width: 180px;
+height: 60px;
 color: #fff;
 border-radius: 5px;
 padding: 10px 25px;
 font-family: 'Lato', sans-serif;
-font-weight: 500;
+font-weight: bold;
+font-size: 22px;
 background: transparent;
 cursor: pointer;
 transition: all 0.3s ease;
@@ -32,7 +33,7 @@ outline: none;
     background: linear-gradient(to bottom right, hotpink, deeppink);
     font-family: fruktur;
     letter-spacing: 1px;
-    color: #abcdef;
+    color: #fff;
     border: none;
     border-radius: 0 50px;
     transition: border-radius 2s;

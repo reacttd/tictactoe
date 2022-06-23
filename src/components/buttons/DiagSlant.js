@@ -30,8 +30,9 @@ const Slant = styled.button`
 }
 
 &{
-  width: 350px;
+  width: 225px;
   height: 100px;
+  margin: 10px;
   background: linear-gradient( #44A7C4, #006994 );
   border: 4px solid #006994 ;
   outline: none;
