@@ -1,18 +1,57 @@
 import React from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import StyledButton , { StyledButtonChanged, FancyButton, SubmitButton, ButtonThemed } from '../components/buttons/VishwasButton';
-import { DarkButton , PinkVersion, ThreeD, GhostButton, MiniThreeD, MiniThreeDGreen, MiniThreeDRed, MiniThreeDYellow, MiniThreeDPurple, MiniThreeDBlue, SmallThreeDGreen, SmallThreeD, SmallThreeDRed, SmallThreeDYellow, SmallThreeDPurple, SmallThreeDBlue, NormalThreeD, NormalThreeDGreen, NormalThreeDRed, NormalThreeDYellow, NormalThreeDPurple, NormalThreeDBlue, LargeThreeD, LargeThreeDGreen, LargeThreeDRed, LargeThreeDYellow, LargeThreeDPurple, LargeThreeDBlue, GreenThreeD, RedThreeD, YellowThreeD, PurpleThreeD, BlueThreeD } from '../components/buttons/Button.styles';
+import { createGlobalStyle } from 'styled-components';
+import StyledButton , { 
+    StyledButtonChanged, 
+    FancyButton, 
+    SubmitButton, 
+    ButtonThemed 
+} from '../components/buttons/VishwasButton';
+import { 
+    DarkButton , 
+    PinkVersion, 
+    ThreeD, 
+    GhostButton, 
+    MiniThreeD, 
+    MiniThreeDGreen, 
+    MiniThreeDRed, 
+    MiniThreeDYellow, 
+    MiniThreeDPurple, 
+    MiniThreeDBlue, 
+    SmallThreeDGreen, 
+    SmallThreeD, 
+    SmallThreeDRed, 
+    SmallThreeDYellow, 
+    SmallThreeDPurple, 
+    SmallThreeDBlue, 
+    NormalThreeD, 
+    NormalThreeDGreen, 
+    NormalThreeDRed, 
+    NormalThreeDYellow, 
+    NormalThreeDPurple, 
+    NormalThreeDBlue, 
+    LargeThreeD, 
+    LargeThreeDGreen, 
+    LargeThreeDRed, 
+    LargeThreeDYellow, 
+    LargeThreeDPurple, 
+    LargeThreeDBlue, 
+    GreenThreeD, 
+    RedThreeD, 
+    YellowThreeD, 
+    PurpleThreeD, 
+    BlueThreeD 
+} from '../components/buttons/Button.styles';
 // import ButtonGroup from '../components/btnGroup/ButtonGroup';
 // import Slant from '../components/buttons/Slant';
 // import BlackPink from '../components/buttons/BlackPink';
-import BubbleGum from '../components/buttons/BubbleGum';
-import FlipButtonHoriz from '../components/buttons/FlipButtonHoriz';
-import DiagSlant from '../components/buttons/DiagSlant';
-import PastelStripes from '../components/buttons/PastelStripes';
-import DiagStripes from '../components/buttons/DiagStripes';
-import PinkBlueStripes from '../components/buttons/PinkBlueStripes';
-import Gummy from '../components/buttons/Gummy';
-import ButtonStandardPinkPurple from '../components/buttons/ButtonStandardPinkPurple';
+// import BubbleGum from '../components/buttons/BubbleGum';
+// import FlipButtonHoriz from '../components/buttons/FlipButtonHoriz';
+// import DiagSlant from '../components/buttons/DiagSlant';
+// import PastelStripes from '../components/buttons/PastelStripes';
+// import DiagStripes from '../components/buttons/DiagStripes';
+// import PinkBlueStripes from '../components/buttons/PinkBlueStripes';
+// import Gummy from '../components/buttons/Gummy';
+// import ButtonStandardPinkPurple from '../components/buttons/ButtonStandardPinkPurple';
 // import ButtonGroupPrimaryBlue from '../components/btnGroup/ButtonGroupPrimaryBlue';
 // import PinkBlackStripes from '../components/buttons/PinkBlackStripes';
 // import BubbleGumBlue from '../components/buttons/BubbleGumBlue';
@@ -41,16 +80,16 @@ const GlobalStyle = createGlobalStyle`
 
 html {
     // font-size:22%;
-    font-family:'Lato', sans-serif;
+    // font-family:'Lato', sans-serif;
     box-sizing: border-box;
 }
 h1{
-    font-size: 1.75rem
-    font-weight: bold;
-    color: #89867e 
+    // font-size: 1.75rem
+    // font-weight: bold;
+    // color: #89867e 
 }
 button {
-    font-family: ${(props) => props.theme.fontFamily};
+    // font-family: ${(props) => props.theme.fontFamily};
 
 }
 `
@@ -86,14 +125,14 @@ const SecondaryForm = props => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
-        <div className = "secondaryForm">
-            <div style={styles.container}>
+        {/* <div className = "secondaryForm"> */}
+            {/* <div style={styles.container}> */}
             {/* <ButtonGroup buttons={["One", "Two", "Three"]}  */}
             {/* doSomethingAfterClick={printButtonLabel} */}
             
         {/* />  */}
-        <section styles={styles.container}>
-            <h1 style={styles.h1mini}>mini</h1>
+        {/* <section styles={styles.container}> */}
+            {/* <h1 style={styles.h1mini}>mini</h1>
             <div style={styles.row}> 
                 <span><MiniThreeD>Button</MiniThreeD></span>
                 <span><MiniThreeDGreen>Button</MiniThreeDGreen></span>                
@@ -101,8 +140,8 @@ const SecondaryForm = props => {
                 <span><MiniThreeDYellow>Button</MiniThreeDYellow></span>
                 <span><MiniThreeDPurple>Button</MiniThreeDPurple></span>
                 <span><MiniThreeDBlue>Button</MiniThreeDBlue></span>
-            </div>            
-            <div>
+            </div>             */}
+            {/* <div>
                 <br />
             </div>
             <div style={styles.div}>
@@ -113,16 +152,16 @@ const SecondaryForm = props => {
                 <br />
             </div>
             <div style={styles.container}>
-                <h1 style={styles.h1small}>small</h1>
-            <div style={styles.row}>
+                <h1 style={styles.h1small}>small</h1> */}
+            {/* <div style={styles.row}>
                 <span><SmallThreeD>Button</SmallThreeD></span>
                 <span><SmallThreeDGreen>Button</SmallThreeDGreen></span>                
                 <span><SmallThreeDRed>Button</SmallThreeDRed></span>
                 <span><SmallThreeDYellow>Button</SmallThreeDYellow></span>
                 <span><SmallThreeDPurple>Button</SmallThreeDPurple></span>
                 <span><SmallThreeDBlue>Button</SmallThreeDBlue></span>
-            </div>
-            </div> 
+            </div> */}
+            {/* </div> 
             <div>
                 <br />
             </div>
@@ -131,8 +170,8 @@ const SecondaryForm = props => {
             </div>
 
             <div style={styles.div}>
-                <br />
-            </div>
+                <br /> */}
+            {/* </div>
             <h1 style={styles.h1normal}>normal</h1>
             <div style={styles.row}> 
                 <span><NormalThreeD>Button</NormalThreeD></span>
@@ -147,9 +186,9 @@ const SecondaryForm = props => {
             </div>
             <div style={styles.div}>
                 <br />
-            </div>
+            </div> */}
 
-            <div style={styles.div}>
+            {/* <div style={styles.div}>
                 <br />
             </div>
             <div style={styles.container}>
@@ -176,15 +215,15 @@ const SecondaryForm = props => {
             {/* <div>
                 <br />
             </div> */}
-            <div style={styles.div}>
+            {/* <div style={styles.div}>
                 <br />
             </div>
             <div style={styles.div}>
                 <br />
-            </div>
-            <div style={styles.container}>
-                <h1 style={styles.h13d}>3-D</h1>
-            {/* <div style={styles.block}>
+            </div> */}
+            {/* <div style={styles.container}> */}
+                {/* <h1 style={styles.h13d}>3-D</h1> */}
+            {/* {/* <div style={styles.block}>
                 <span><BlockThreeD>Button</BlockThreeD></span>
                 <span><BlockThreeDGreen>Button</BlockThreeDGreen></span>                
                 <span><BlockThreeDRed>Button</BlockThreeDRed></span>
@@ -192,7 +231,7 @@ const SecondaryForm = props => {
                 <span><BlockThreeDPurple>Button</BlockThreeDPurple></span>
                 <span><BlockThreeDBlue>Button</BlockThreeDBlue></span>
             </div> */}
-            </div> 
+            {/* </div> */}
 
             {/* <div style={styles.div}>
                 <br />
@@ -202,7 +241,7 @@ const SecondaryForm = props => {
                 <br />
             </div>
                           */}
-        <div style={styles.row}>
+        {/* <div style={styles.row}>
             <span><ThreeD>Three D</ThreeD></span>                    
             <span><ThreeD variant='outline'>Blue 3-D</ThreeD></span>
         </div>
@@ -237,10 +276,10 @@ const SecondaryForm = props => {
          <div>
             <span><FlipButtonHoriz btnText="Flip"/></span>
             <span><StyledButton type="submit" style={styles.btn}>Styled</StyledButton></span>    
-        </div>
+        </div> */}
 
                 
-
+{/* 
             <div>
                 <br />
             </div>
@@ -281,15 +320,15 @@ const SecondaryForm = props => {
                 <span>
                     <DiagSlant btnText="Slant" />
                 </span>
-        </section> 
+        </section>  */}
         
-        <ul style={styles.container}>
+        {/* <ul style={styles.container}> */}
         {/* <ButtonGroup buttons={["One", "Two", "Three"]} 
             doSomethingAfterClick={printButtonLabel}>
         </ButtonGroup> */}
-            <br />
-                <li>
-                    {/* <ButtonGroupPrimaryBlue /> */}
+            {/* <br /> */}
+                {/* <li> */}
+                    {/* <ButtonGroupPrimaryBlue />
                 </li>
 
                 <li>
@@ -306,8 +345,8 @@ const SecondaryForm = props => {
             </div>
                 <li>
                     <PinkBlueStripes btnText="Stripes"/>
-                </li>
-            <div>
+                </li> */}
+            {/* <div>
                 <br />
             </div>
                 <li>
@@ -323,12 +362,12 @@ const SecondaryForm = props => {
                 <br />
             </div> 
         </ul>
-        <ul style={styles.container}>  
+        <ul style={styles.container}>   */}
         {/* <ButtonGroup buttons={["One", "Two", "Three"]} 
             doSomethingAfterClick={printButtonLabel}>
         </ButtonGroup>       */}
 
-            <div>
+            {/* <div>
                 <br />
             </div>
                 <StyledButtonChanged style={styles.btnchanged}>Changed</StyledButtonChanged>
@@ -339,27 +378,27 @@ const SecondaryForm = props => {
         <ul style={styles.container}>
             <div>
                 <br />
-            </div>
-                <li>
+            </div> */}
+                {/* <li>
                     <BubbleGum btnText="Bubble Gum" />
                 </li>
             <div>
                 <br />
             </div>
-                <li>
-                    <DiagStripes btnText="Stripes" />
+                <li> */}
+                    {/* <DiagStripes btnText="Stripes" />
                 </li>             
             <div>
                 <br />
             </div>
-                <li>
-                    <ButtonStandardPinkPurple btnText="Red Purple"/>
-                </li>
+                <li> */}
+                    {/* <ButtonStandardPinkPurple btnText="Red Purple"/> */}
+                {/* </li> */}
                 {/* <MovingButton style={styles.moving}><img src={IconImg} style={styles.logo}alt="logo"></img></MovingButton> */}
 
                 {/* <Rotate style={styles.rotate} btnText="Trapstar" />  */}
             
-            <div>
+            {/* <div>
                 <br />
             </div>
 
@@ -368,7 +407,7 @@ const SecondaryForm = props => {
             </div>
         </ul>
             </div>
-        </div>
+        </div> */}
         </ThemeProvider>
     )
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../images/LOGO.png';
 import {MdStreetview, MdOutlineFavorite} from 'react-icons/md';
 import {GiShadowFollower} from 'react-icons/gi';
-import {BiRepost} from 'react-icons/bi';
+// import {BiRepost} from 'react-icons/bi';
 import {GiPostStamp} from 'react-icons/gi';
 import {AiFillDashboard} from 'react-icons/ai';
 import { BiLogInCircle } from 'react-icons/bi'
@@ -21,7 +21,7 @@ const NavDash = (props) => {
             <Link to="/views" style={styles.Link}><MdStreetview /></Link>
             <Link to="/likes" style={styles.Link}><MdOutlineFavorite /></Link>
             <Link to="/followers" style={styles.Link}><GiShadowFollower /></Link>
-            <Link to="/reposts" style={styles.Link}><BiRepost /></Link>
+            {/* <Link to="/reposts" style={styles.Link}><BiRepost /></Link> */}
             <Link to="/post" style={styles.Link}><GiPostStamp /></Link>
             <Link to="/myform" style={styles.Link}><BiLogInCircle /></Link>
             <Link to="secondaryform" style={styles.Link}><FaUserEdit /></Link>
