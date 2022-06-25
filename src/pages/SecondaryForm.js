@@ -1,5 +1,5 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import StyledButton , { 
     StyledButtonChanged, 
     FancyButton, 
@@ -8,9 +8,9 @@ import StyledButton , {
 } from '../components/buttons/VishwasButton';
 import { 
     DarkButton , 
-    PinkVersion, 
+    // PinkVersion, 
     ThreeD, 
-    GhostButton, 
+    // GhostButton, 
     MiniThreeD, 
     MiniThreeDGreen, 
     MiniThreeDRed, 
@@ -125,14 +125,13 @@ const SecondaryForm = props => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
-        {/* <div className = "secondaryForm"> */}
+        <div className = "secondaryForm">
             {/* <div style={styles.container}> */}
             {/* <ButtonGroup buttons={["One", "Two", "Three"]}  */}
             {/* doSomethingAfterClick={printButtonLabel} */}
             
-        {/* />  */}
-        {/* <section styles={styles.container}> */}
-            {/* <h1 style={styles.h1mini}>mini</h1>
+        <section styles={styles.container}>
+            <h1 style={styles.h1mini}>mini</h1>
             <div style={styles.row}> 
                 <span><MiniThreeD>Button</MiniThreeD></span>
                 <span><MiniThreeDGreen>Button</MiniThreeDGreen></span>                
@@ -140,28 +139,28 @@ const SecondaryForm = props => {
                 <span><MiniThreeDYellow>Button</MiniThreeDYellow></span>
                 <span><MiniThreeDPurple>Button</MiniThreeDPurple></span>
                 <span><MiniThreeDBlue>Button</MiniThreeDBlue></span>
-            </div>             */}
-            {/* <div>
+            </div>            
+            <div>
                 <br />
             </div>
-            <div style={styles.div}>
-                <br />
-            </div>
+            {/* <div style={styles.div}>
+                <br />https://github.com/TrioWolf/GW-Testing.githttps://github.com/TrioWolf/GW-Testing.git
+            </div> */}
 
             <div style={styles.div}>
                 <br />
             </div>
             <div style={styles.container}>
-                <h1 style={styles.h1small}>small</h1> */}
-            {/* <div style={styles.row}>
+                <h1 style={styles.h1small}>small</h1>
+            <div style={styles.row}>
                 <span><SmallThreeD>Button</SmallThreeD></span>
                 <span><SmallThreeDGreen>Button</SmallThreeDGreen></span>                
                 <span><SmallThreeDRed>Button</SmallThreeDRed></span>
                 <span><SmallThreeDYellow>Button</SmallThreeDYellow></span>
                 <span><SmallThreeDPurple>Button</SmallThreeDPurple></span>
                 <span><SmallThreeDBlue>Button</SmallThreeDBlue></span>
-            </div> */}
-            {/* </div> 
+            </div>
+            </div> 
             <div>
                 <br />
             </div>
@@ -170,8 +169,8 @@ const SecondaryForm = props => {
             </div>
 
             <div style={styles.div}>
-                <br /> */}
-            {/* </div>
+                <br />
+            </div>
             <h1 style={styles.h1normal}>normal</h1>
             <div style={styles.row}> 
                 <span><NormalThreeD>Button</NormalThreeD></span>
@@ -186,9 +185,9 @@ const SecondaryForm = props => {
             </div>
             <div style={styles.div}>
                 <br />
-            </div> */}
+            </div>
 
-            {/* <div style={styles.div}>
+            <div style={styles.div}>
                 <br />
             </div>
             <div style={styles.container}>
@@ -221,27 +220,27 @@ const SecondaryForm = props => {
             <div style={styles.div}>
                 <br />
             </div> */}
-            {/* <div style={styles.container}> */}
-                {/* <h1 style={styles.h13d}>3-D</h1> */}
-            {/* {/* <div style={styles.block}>
-                <span><BlockThreeD>Button</BlockThreeD></span>
+            <div style={styles.container}>
+                <h1 style={styles.h13d}>3-D</h1>
+            <div style={styles.block}>
+                {/* <span><BlockThreeD>Button</BlockThreeD></span>
                 <span><BlockThreeDGreen>Button</BlockThreeDGreen></span>                
                 <span><BlockThreeDRed>Button</BlockThreeDRed></span>
                 <span><BlockThreeDYellow>Button</BlockThreeDYellow></span>
                 <span><BlockThreeDPurple>Button</BlockThreeDPurple></span>
-                <span><BlockThreeDBlue>Button</BlockThreeDBlue></span>
-            </div> */}
-            {/* </div> */}
+                <span><BlockThreeDBlue>Button</BlockThreeDBlue></span> */}
+            </div>
+            </div>
 
-            {/* <div style={styles.div}>
+            <div style={styles.div}>
                 <br />
-            </div> */}
+            </div> 
 
             {/* <div style={styles.div}>
                 <br />
             </div>
                           */}
-        {/* <div style={styles.row}>
+        <div style={styles.row}>
             <span><ThreeD>Three D</ThreeD></span>                    
             <span><ThreeD variant='outline'>Blue 3-D</ThreeD></span>
         </div>
@@ -266,20 +265,20 @@ const SecondaryForm = props => {
             <span><BlueThreeD variant='outline'>Blue 3-D</BlueThreeD></span>
         </div>
         <div style={styles.row}>                    
-            <span><PinkVersion>Pink 3-D</PinkVersion></span>
-            <span><PinkVersion variant='outline'>Pink 3-D</PinkVersion></span>
+            {/* <span><PinkVersion>Pink 3-D</PinkVersion></span>
+            <span><PinkVersion variant='outline'>Pink 3-D</PinkVersion></span> */}
         </div>
         <div style={styles.row}>
-            <span><GhostButton>Ghost</GhostButton></span>
-            <span><GhostButton variant='outline'>Ghost</GhostButton></span>
+            {/* <span><GhostButton>Ghost</GhostButton></span>
+            <span><GhostButton variant='outline'>Ghost</GhostButton></span> */}
         </div>     
          <div>
-            <span><FlipButtonHoriz btnText="Flip"/></span>
+            {/* <span><FlipButtonHoriz btnText="Flip"/></span> */}
             <span><StyledButton type="submit" style={styles.btn}>Styled</StyledButton></span>    
-        </div> */}
+        </div>
 
                 
-{/* 
+
             <div>
                 <br />
             </div>
@@ -317,10 +316,10 @@ const SecondaryForm = props => {
             <div>
                 <br />
             </div>
-                <span>
+                {/* <span>
                     <DiagSlant btnText="Slant" />
-                </span>
-        </section>  */}
+                </span> */}
+        </section>
         
         {/* <ul style={styles.container}> */}
         {/* <ButtonGroup buttons={["One", "Two", "Three"]} 
@@ -367,18 +366,18 @@ const SecondaryForm = props => {
             doSomethingAfterClick={printButtonLabel}>
         </ButtonGroup>       */}
 
-            {/* <div>
+            <div>
                 <br />
             </div>
                 <StyledButtonChanged style={styles.btnchanged}>Changed</StyledButtonChanged>
             <div>
                 <br />
             </div>
-        </ul>
-        <ul style={styles.container}>
+        {/* </ul> */}
+        {/* <ul style={styles.container}> */}
             <div>
                 <br />
-            </div> */}
+            </div>
                 {/* <li>
                     <BubbleGum btnText="Bubble Gum" />
                 </li>
@@ -398,16 +397,16 @@ const SecondaryForm = props => {
 
                 {/* <Rotate style={styles.rotate} btnText="Trapstar" />  */}
             
-            {/* <div>
+             <div>
                 <br />
             </div>
 
             <div>
                 <br />
             </div>
-        </ul>
-            </div>
-        </div> */}
+        {/* </ul> */}
+
+        </div>
         </ThemeProvider>
     )
 }
@@ -432,83 +431,84 @@ const styles={
 
         margin: '0 auto'
     },
+}
     // container:{
-        // position: 'relative',
-        // display: 'inline-flex',
-        // // display: 'flex',
-        // flexDirection: 'column',
-        // flexWrap: 'wrap',
-        // // justifyContent: 'center',
-        // // width: '30%',
-        // background: 'white',
-        // borderRadius: '4px',
-        // textAlign: 'center',
-        // marginBottom: '40px',
-        // // height: '100vh',
-        // gap: '30px',
+    //     position: 'relative',
+    //     display: 'inline-flex',
+    //     // display: 'flex',
+    //     flexDirection: 'column',
+    //     flexWrap: 'wrap',
+    //     // justifyContent: 'center',
+    //     // width: '30%',
+    //     background: 'white',
+    //     borderRadius: '4px',
+    //     textAlign: 'center',
+    //     marginBottom: '40px',
+    //     // height: '100vh',
+    //     gap: '30px',
     // },
-    div:{
-        backgroundColor: 'black'
-    },
-    h1mini:{
-        fontSize: '1.75rem',
-        color: '#89867e',
-        marginBottom: '30px'
-    },
-    h1small:{
-        fontSize: '1.75rem',
-        color: '#89867e',
-    },
-    h1normal:{
-        fontSize: '1.75rem',
-        color: '#89867e',
-        marginBottom: '30px',
-    },
-    h1large:{
-        fontSize: '1.75rem',
-        color: '#89867e',
-        marginBottom: '30px',
-    },
-    h13d:{
-        fontSize: '1.75rem',
-        color: '#89867e',
-        marginBottom: '30px',
-    },
-    row:{
-        display: 'flex',
-        justifyContent: 'center',
-    },
-    block:{
-        display: 'flex',
-        // width: '100%',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        textAlign: 'center',
-        // display: 'flex',
-        flexDirection: 'column',
+    // div:{
+    //     backgroundColor: 'black'
+    // },
+    // h1mini:{
+    //     fontSize: '1.75rem',
+    //     color: '#89867e',
+    //     marginBottom: '30px'
+    // },
+    // h1small:{
+    //     fontSize: '1.75rem',
+    //     color: '#89867e',
+    // },
+    // h1normal:{
+    //     fontSize: '1.75rem',
+    //     color: '#89867e',
+    //     marginBottom: '30px',
+    // },
+    // h1large:{
+    //     fontSize: '1.75rem',
+    //     color: '#89867e',
+    //     marginBottom: '30px',
+    // },
+    // h13d:{
+    //     fontSize: '1.75rem',
+    //     color: '#89867e',
+    //     marginBottom: '30px',
+    // },
+    // row:{
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    // },
+    // block:{
+    //     display: 'flex',
+    //     // width: '100%',
+    //     marginLeft: 'auto',
+    //     marginRight: 'auto',
+    //     textAlign: 'center',
+    //     // display: 'flex',
+    //     flexDirection: 'column',
 
-    },
-    btn:{
-        // display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        // justifyContent: 'space-evenly',
-        // width: '130px',
-        // height: '70px',
-        margin: '10px',
-        // textAlign: 'center',
-    },
-    btnchanged:{
-        textAlign: 'center'
-    },
-    moving:{
-        width:'100px',
-        height: '100px',
-    },
-    rotate:{
-        fontWeight:'bold',
-        color: 'black',
-    },
+    // },
+    // btn:{
+    //     // display: 'flex',
+    //     flexDirection: 'row',
+    //     alignItems: 'center',
+    //     // justifyContent: 'space-evenly',
+    //     // width: '130px',
+    //     // height: '70px',
+    //     margin: '10px',
+    //     // textAlign: 'center',
+    // },
+    // btnchanged:{
+    //     textAlign: 'center'
+    // },
+    // moving:{
+    //     width:'100px',
+    //     height: '100px',
+    // },
+    // rotate:{
+    //     fontWeight:'bold',
+    //     color: 'black',
+    // },
     // btnGroup:{
     //     margin: '10px',
     //     padding: '0px 70px',
@@ -521,7 +521,7 @@ const styles={
     //     width: '100px',
     //     height: '100px',
     // }
-}
+// }
 // import React from "react";
 // // import MyBtn from "../buttons/MyBtn";
 // import { FaUserEdit } from 'react-icons/fa';

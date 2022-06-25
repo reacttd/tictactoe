@@ -7,6 +7,8 @@ import GlobalStyle from '../components/styles/Global.styled';
 // import ScrollButton from '../components/ScrollButton';
 import content from '../content';
 import Card from '../components/Card';
+
+
 // import Navbar from '../components/Navbar';
 // import AvatarIcon from './images/tsbam.png';
 const theme = {
