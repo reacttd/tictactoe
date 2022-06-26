@@ -16,9 +16,9 @@ function Views() {
                         <div className='col-lg-12'>
                           <div className='form-group text-center'>
                             <div className='userprofile'>
-                              <img src={AvatarIcon} alt="Dashboard" />
+                              <img src={AvatarIcon} alt="Dashboard" style={styles.avatar} />
                               <div className='profile-btn'>
-                                <div>{<RiEditCircleFill />}</div>
+                                <div style={styles.icon}>{<RiEditCircleFill />}</div>
                                 <input type="file"
                                 name="userImage" 
                                 className="emoji" 
@@ -29,7 +29,7 @@ function Views() {
                         </div>
                         <div className="col-lg-6">
                           <div className="form-group">
-                            <label className='d-block'>First Name</label>
+                            <label className='d-block'>User Name</label>
                             <input 
                               type="text" 
                               name="firstname" 
@@ -39,7 +39,7 @@ function Views() {
                         </div>
                         <div className="col-lg-6">
                           <div className="form-group">
-                            <label className='d-block'>Last Name</label>
+                            <label className='d-block'>Email</label>
                             <input 
                               type="text" 
                               name="lastname" 
@@ -49,7 +49,7 @@ function Views() {
                         </div>
                         <div className="col-lg-6">
                           <div className="form-group">
-                            <label className='d-block'>Email</label>
+                            <label className='d-block'>Password</label>
                             <input 
                               type="email" 
                               name="email" 
@@ -59,7 +59,7 @@ function Views() {
                         </div>
                         <div className="col-lg-6">
                           <div className="form-group">
-                            <label className='d-block'>Password</label>
+                            <label className='d-block'>Confirm Password</label>
                             <input 
                               type="password" 
                               name="password" 
@@ -77,6 +77,17 @@ function Views() {
   )
 }
 export default Views;
+
+const styles = {
+  avatar: {
+    width: '100px',
+
+  },
+
+  icon: {
+    color: '#E0AFFD'
+  }
+}
 
 // const styles = {
 //   Repost: {

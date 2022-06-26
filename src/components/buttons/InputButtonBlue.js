@@ -4,6 +4,7 @@ import { FaHome } from 'react-icons/fa';
 const InputButtonBlue = (props) => {
 
     return(
+        <>
         <div style={styles.searchCont}>
             <span style={styles.inputIcon}><FaHome /></span>
             <input
@@ -12,6 +13,15 @@ const InputButtonBlue = (props) => {
                 placeholder="HOME" 
             />
         </div>
+                <div style={styles.searchCont}>
+                <span style={styles.inputIcon}><FaHome /></span>
+                <input
+                    type="text"
+                    style={styles.inputwithIcon}
+                    placeholder="HOME" 
+                />
+        </div>
+        </>
     )
 };
 export default InputButtonBlue ; 
@@ -24,7 +34,7 @@ const styles = {
 		// alignItems: 'stretch',
 		// width: '40px',
 		// alignItems: 'center',
-		marginLeft: '30px,'
+		marginLeft: '30px',
         // flexDirection: 'row',
         // borderRadius: '4px',
         // width:'40%',
@@ -46,7 +56,9 @@ const styles = {
         flex: 1,
         padding: '10px',
 		// marginLeft: '20px',
-    }
+    },
+
+    
 }
 // import React from 'react';
 // import { FaSearch } from 'react-icons/fa';
