@@ -31,4 +31,3 @@ const Sidebar = ({ isOpen, toggle }) => {
     );
 };
 
-export default Sidebar;

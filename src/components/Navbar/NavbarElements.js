@@ -29,7 +29,7 @@ padding: 0 24px;
 max-width: 1100px;
 `;
 export const NavLogo = styled(LinkR)`
-color: #fff;
+// color: #fff;
 justify-self: flex-start;
 cursor: pointer;
 font-size: 1.5rem;
@@ -39,6 +39,11 @@ margin-left: 24px;
 font-weight: bold;
 text-decoration: none;
 `;
+
+export const NavIcon = styled.img`
+    width: 75px;
+    height: 75px;
+`
 
 export const MobileIcon = styled.div`
     display: none;
@@ -83,7 +88,7 @@ export const NavLinks = styled(LinkS)`
     cursor: pointer;
 
     &.active {
-        border-bottom: 3px solid #01bf71
+        border-bottom: 3px solid #FFC0CB;
     }
 `;
 
@@ -98,7 +103,7 @@ align-items: center;
 
 export const NavBtnLink = styled(LinkR)`
 border-radius: 50px;
-background: #01bf71;
+background: #FFC0CB;
 white-space: nowrap;
 padding: 10px 22px;
 color: #010606;
