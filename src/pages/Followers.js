@@ -1,5 +1,10 @@
 // import IconImg from '../components/MyLogo';
 import NAVbar from "../components/Navbar";
+import InfoSection from "../components/infoSection";
+import Footer from "../components/FooterSection";
+import HeroSection from "../components/HeroSection";
+import Services from "../components/ServicesSection"
+// import Sidebar from "../components/SidebarSection";
 // import Section from "./components/Section";
 // import dummyText from "./DummyText";
 function Followers() {
@@ -7,6 +12,11 @@ function Followers() {
     return (
       <div>
         <NAVbar />
+        <HeroSection />
+        <InfoSection />
+        <Services />
+        <Footer />
+        {/* <Sidebar /> */}
         
         {/* <Section
           title="Section 1"

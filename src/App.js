@@ -1,19 +1,19 @@
 
 import { Routes, Route } from 'react-router-dom';
-import HeaderDash from './components/HeaderDash';
+// import HeaderDash from './components/HeaderDash';
 import "./App.css";
 import Dashboard from './pages/Dashboard';
 import Views from './pages/Views';
 import Followers from './pages/Followers';
 import Likes from './pages/Likes';
-import MyAds from './components/MyAds';
+// import MyAds from './components/MyAds';
 import Landing from './pages/Landing';
 // import Reposts from './pages/Reposts';
 import Settings from './pages/Settings';
 import NavDash from './components/NavDash';
-import Concert from './images/concert.jpg';
+// import Concert from './images/concert.jpg';
 // import Yeat from './images/Yeat.png';
-import Yeatpreset from './images/yeatpreset.png';
+// import Yeatpreset from './images/yeatpreset.png';
 import Form from './pages/Form';
 import SecondaryForm from './pages/SecondaryForm';
 // import Home from './pages/Home';
@@ -28,7 +28,7 @@ import SecondaryForm from './pages/SecondaryForm';
 function App() {
   return (
     <div>
-      <HeaderDash pgTitle="tsbam" style={styles.H1} placeholder="Search..." />
+      {/* <HeaderDash pgTitle="tsbam" style={styles.H1} placeholder="Search..." /> */}
         <section style={styles.container}>
           {/* <Header /> */}
           {/* <Navbar />   */}
@@ -47,7 +47,7 @@ function App() {
             btnText="Post" /> */}
             {/* {item} */}
             <Routes>
-              <Route exact path="/" element={<Dashboard />} />
+              <Route path="/" element={<Dashboard />} />
               <Route path="/Dashboard" element={<Dashboard />} />
               <Route path="/Followers" element={<Followers />} />
               <Route path="/Likes" element={<Likes />} />
@@ -61,9 +61,9 @@ function App() {
             </Routes>
           </main>
           <aside style={styles.adscontainer}>
-              <MyAds title="Trapstar Bam" info="Live at the Orange Peel" img={Concert} alt="Trapstar Bam concert ad" />
+              {/* <MyAds title="Trapstar Bam" info="Live at the Orange Peel" img={Concert} alt="Trapstar Bam concert ad" /> */}
               {/* <MyAds title="Yeat Concert" info="Get Tickets Online" img={Yeat} alt="Yeat concert ad" /> */}
-              <MyAds title="Yeat Preset" info="Vocal Mix" img={Yeatpreset} alt="Yeat preset cover" />
+              {/* <MyAds title="Yeat Preset" info="Vocal Mix" img={Yeatpreset} alt="Yeat preset cover" /> */}
             </aside>
             {/* </Routes> */}
         </section>
@@ -94,7 +94,7 @@ const styles = {
     alignContent:'center',
     // overflow:'scroll',
     margin:'0%',
-    padding: '2%',
+    // padding: '2%',
     width: '100%'
   }
 }

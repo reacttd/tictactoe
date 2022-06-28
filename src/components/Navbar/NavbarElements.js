@@ -103,7 +103,7 @@ align-items: center;
 
 export const NavBtnLink = styled(LinkR)`
 border-radius: 50px;
-background: #FFC0CB;
+background: #e1affd;
 white-space: nowrap;
 padding: 10px 22px;
 color: #010606;

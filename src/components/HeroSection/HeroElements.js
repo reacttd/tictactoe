@@ -53,7 +53,7 @@ export const HeroContent = styled.div`
 `
 
 export const HeroH1 = styled.h1`
-    color: #FFC0CB;
+    color: #e1affd;
     font-size: 48px;
     text-align: center;
 

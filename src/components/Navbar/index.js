@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import logo from '../../images/logo.png';
+import logo from '../../images/LOGO.png';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
@@ -42,7 +42,7 @@ const toggleHome = () => {
         <Nav scrollNav={scrollNav}>
             <NavbarContainer>
                 <NavLogo to='/'>
-                  <NavIcon src="../../images/logo.png" onClick={toggleHome} />
+                  <NavIcon src={logo} onClick={toggleHome} />
                 </NavLogo>
                 <MobileIcon onClick={toggle}>
                   <FaBars />

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-// import {
-//   Nav,
-//   NavUl,
-//   NavLi,
-//   Main,
-//   About,
-//   Contact,
-//   NavLinks
-// } from './NAVbarElements'
+import {
+  Nav,
+  NavUl,
+  NavLi,
+  Main,
+  About,
+  Contact,
+  NavLinks
+} from './NAVbarElements'
 
 const NAVbar = ({ toggle }) => {
     const [navtags, setNavTags] = useState(false)
