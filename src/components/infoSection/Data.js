@@ -27,6 +27,7 @@ export const homeObjTwo = {
     imgStart: true,
     img: require('../../images/startuplifepink.png'),
     alt: 'Piggybank',
+    url: require("https://soundcloud.com/trapstarbam/sets/trapstar-bam-tracks?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"),
     dark: false,
     primary: false,
     darkText: true

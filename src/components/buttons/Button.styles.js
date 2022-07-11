@@ -163,7 +163,8 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     box-shadow: 0 0 0 1px #7fccde inset,
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
-	top: 9px;   
+        top: 9px; 
+    }  
 `
 export const GreenThreeD = styled(ThreeD)`
 border: 2px solid #82c8a0;
@@ -189,6 +190,7 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
     top: 9px;
+}
 `
 export const RedThreeD = styled(ThreeD)`
 border: 2px solid #fa5a5a;
@@ -213,7 +215,8 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     box-shadow: 0 0 0 1px #fa5a5a inset,
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
-	top: 9px; 
+	top: 9px;
+} 
 `
 export const YellowThreeD = styled(ThreeD)`
 border: 2px solid #f0d264;
@@ -239,6 +242,7 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
 	top: 9px; 
+}
 `
 export const PurpleThreeD = styled(ThreeD)`
 border: 2px solid #cb99c5;
@@ -264,6 +268,7 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
 	top: 9px; 
+}
 `
 export const BlueThreeD = styled(ThreeD)`
 border: 2px solid #6698cb;
@@ -289,6 +294,7 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
 	top: 9px; 
+}
 `
 export const MiniThreeD = styled(ThreeD)`
 padding: 4px 12px;  
@@ -340,6 +346,7 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
 	top: 9px; 
+}
 `
 export const SmallThreeDGreen = styled(MiniThreeDGreen)`
 padding: 8px 18px;  
@@ -387,6 +394,7 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
 	top: 9px; 
+}
 `
 
 export const SmallThreeDRed = styled(MiniThreeDRed)`
@@ -435,7 +443,9 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
 	top: 9px; 
+}
 `
+
 export const SmallThreeDYellow = styled(MiniThreeDYellow)`
 padding: 8px 18px;  
 font-size: 14px;
@@ -482,6 +492,7 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
 	top: 9px; 
+}
 `
 export const SmallThreeDPurple = styled(MiniThreeDPurple)`
 padding: 8px 18px;  
@@ -527,7 +538,8 @@ text-shadow: 0 1px 0 rgba(0,0,0,0.15);
     box-shadow: 0 0 0 1px #6698cb inset,
     0 0 0 2px rgba(255,255,255,0.15) inset,
     0 0 0 1px rgba(0,0,0,0.4);
-	top: 9px; 
+	top: 9px;
+    }
 `
 export const SmallThreeDBlue = styled(MiniThreeDBlue)`
 padding: 8px 18px;  
@@ -562,7 +574,7 @@ box-shadow: 0 0 0 1px #cb99c5 inset,
 &:hover{
     background-color: #d19ecb
 }
-}
+
 &:active {
 	box-shadow: 0 0 0 1px #cb99c5 inset,
 				0 0 0 2px rgba(255,255,255,0.15) inset,
@@ -573,7 +585,7 @@ box-shadow: 0 0 0 1px #cb99c5 inset,
 //  Beginning of Small Buttons
 
 export const GhostButton = styled(ThreeD)`
-border: 2px solid #FF0072#;
+border: 2px solid #FF0072;
 background-color: ${(props) => 
     props.variant === 'outline' ? '#fff' : '#FF0072'};
 color: ${(props) => (props.variant === 'outline' ? '#FF0072' : '#fff')};
@@ -585,7 +597,7 @@ box-shadow: 0 0 0 1px #FF0072 inset,
 &:hover{
     background-color: #FF0072
 }
-}
+
 &:active {
 	box-shadow: 0 0 0 1px #FF0072 inset,
 				0 0 0 2px rgba(255,255,255,0.15) inset,
