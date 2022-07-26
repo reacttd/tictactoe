@@ -33,6 +33,23 @@ export const homeObjTwo = {
     darkText: true
 };
 
+export const musicOne = {
+    id: 'tracks',
+    lightText: true,
+    lightTextDesc: true,
+    topline: 'Tracks and New Release',
+    headline: 'Hear the latest track with SoundCloud',
+    description: 'Get access to our exclusive app that allows you to preview your application in differnt colors and themes before you make a final decision about your design.',
+    buttonLabel: 'SoundCloud',
+    playerStart: false,
+    src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1301267287&color=%238d00ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+    // img: require('../../images/reactpink.png'),
+    // alt: 'React',
+    dark: true,
+    primary: true,
+    darkText: false
+}
+
 export const homeObjThree = {
     id: 'signup',
     lightBg: true,

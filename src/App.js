@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom';
 // import HeaderDash from './components/HeaderDash';
 import "./App.css";
+import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Views from './pages/Views';
 import Followers from './pages/Followers';
@@ -23,17 +24,17 @@ import SecondaryForm from './pages/SecondaryForm';
 // import PostForm from './components/PostForm';
 // import { ArtistArticle } from './components/ArtistArticle';
 
-
-
 function App() {
   return (
     <div>
+
       {/* <HeaderDash pgTitle="tsbam" style={styles.H1} placeholder="Search..." /> */}
         <section style={styles.container}>
           {/* <Header /> */}
           {/* <Navbar />   */}
           {/* <Sidebar /> */}
           <NavDash />
+          
           <main style={styles.main}>
           {/* <Reposts /> */}
           {/* <ArtistArticle /> */}
@@ -57,7 +58,7 @@ function App() {
               <Route path="/Form" element={<Form />} />
               <Route path="/SecondaryForm" element={<SecondaryForm />} />
               <Route path="/Landing" element={<Landing />} />
-              {/* <Home path="/Home" element={<home />} />  */}
+              <Route path="/Home" element={<Home />} /> 
             </Routes>
           </main>
           <aside style={styles.adscontainer}>

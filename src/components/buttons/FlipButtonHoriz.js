@@ -51,7 +51,7 @@ margin: 10px;
   
   &:hover {
       transform-origin: center bottom;
-      transform: rotateX(-90deg); translateY(100%);
+      transform: rotateX(-90deg) translateY(100%);
   
   }
 `

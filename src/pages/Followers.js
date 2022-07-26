@@ -3,7 +3,9 @@ import NAVbar from "../components/Navbar";
 import InfoSection from "../components/infoSection";
 import Footer from "../components/FooterSection";
 import HeroSection from "../components/HeroSection";
-import Services from "../components/ServicesSection"
+import Services from "../components/ServicesSection";
+import SoundCloudSection from "../components/SoundcloudSection";
+// import index from './index'
 // import Sidebar from "../components/SidebarSection";
 // import Section from "./components/Section";
 // import dummyText from "./DummyText";
@@ -15,6 +17,7 @@ function Followers() {
         <HeroSection />
         <InfoSection />
         <Services />
+        <SoundCloudSection />
         <Footer />
         {/* <Sidebar /> */}
         
