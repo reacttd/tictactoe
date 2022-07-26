@@ -1,7 +1,10 @@
 
 import { Routes, Route } from 'react-router-dom';
+// import DesktopBreakpoint from './components/responsive_utilities/desktop_breakpoint';
 // import HeaderDash from './components/HeaderDash';
+// import TabletBreakpoint from './components/responsive_utilities/tablet_breakpoint';
 import "./App.css";
+// import PhoneBreakpoint from './components/responsive_utilities/phone_breakpoint';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Views from './pages/Views';
@@ -27,7 +30,19 @@ import SecondaryForm from './pages/SecondaryForm';
 function App() {
   return (
     <div>
+      {/* <h2>My Breakpoints!</h2> */}
 
+      {/* <DesktopBreakpoint> */}
+        {/* <h3>DesktopBreakpoint!</h3> */}
+      {/* </DesktopBreakpoint> */}
+
+    {/* <TabletBreakpoint> */}
+      {/* <h3>TabletBreakpoint!</h3> */}
+    {/* </TabletBreakpoint> */}
+
+    {/* <PhoneBreakpoint> */}
+      {/* <h3>PhoneBreakpoint!</h3> */}
+    {/* </PhoneBreakpoint> */}
       {/* <HeaderDash pgTitle="tsbam" style={styles.H1} placeholder="Search..." /> */}
         <section style={styles.container}>
           {/* <Header /> */}

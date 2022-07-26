@@ -1,6 +1,7 @@
 
 import React from "react";
 import { PieChart, Pie } from 'recharts';
+// import TabletBreakpoint from "./responsive_utilities/tablet_breakpoint";
 
 // const [pageTitle] = ['Reposts'];
 
@@ -29,10 +30,12 @@ const ChartBar = ({chartBar}) => {
   return (
     <div key={chartBar.id} style={styles.card}>
       <h1>{chartBar.chartHeader}</h1>
-      <PieChart width={400} height={400}>
+      {/* <TabletBreakpoint> */}
+        <PieChart width={400} height={400}>
           <Pie data={data01} dataKey="value" cx="50%" cy="50%" outerRadius={60} fill="#8884d8" margin="5px" />
           <Pie data={data02} dataKey="value" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
         </PieChart>
+      {/* </TabletBreakpoint> */}
     </div>
   )
 };

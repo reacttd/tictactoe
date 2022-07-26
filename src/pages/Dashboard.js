@@ -1,6 +1,10 @@
 import React, {useState} from "react";
+import DesktopBreakpoint from "../components/responsive_utilities/desktop_breakpoint";
+// import PhoneBreakpoint from "../components/responsive_utilities/phone_breakpoint";
+// import TabletBreakpoint from "../components/responsive_utilities/tablet_breakpoint";
 import ChartBar1 from "../components/ChartBar1";
 import ChartBar from '../components/ChartBar';
+// import DesktopBreakpoint from "../components/responsive_utilities/desktop_breakpoint";
 
 function Dashboard() {    
     const [pageTitle] = ['Dashboard'];
@@ -20,6 +24,8 @@ function Dashboard() {
 
     return (
     <div>
+        {/* <DesktopBreakpoint> */}
+        {/* <TabletBreakpoint> */}
     <h1 style={styles.myh1}>{pageTitle}</h1>
         <section style = {styles.container}>
             
@@ -28,6 +34,9 @@ function Dashboard() {
             <div style={styles.header}>
                 
                 <div style={styles.row}>
+                        {/* <TabletBreakpoint> */}
+                    {/* <DesktopBreakpoint> */}
+                    {/* <PhoneBreakpoint> */}
                     {chartBar1.map((chartBar1, id) => (
                         <ChartBar1
                         key={id}
@@ -35,8 +44,13 @@ function Dashboard() {
                         chartBar1={chartBar1} 
                         />    
                     ))}
+                    {/* </PhoneBreakpoint> */}
+                    {/* </DesktopBreakpoint> */}
+                    {/* </TabletBreakpoint> */}
                 </div> 
                 <div style={styles.chartBar}>
+                    <DesktopBreakpoint>
+                    {/* <TabletBreakpoint> */}
                     {chartBar.map((chartBar, id) => (
                         <ChartBar
                         key={id}
@@ -44,6 +58,8 @@ function Dashboard() {
                         chartBar={chartBar}
                         />
                     ))}
+                    </DesktopBreakpoint>
+                    {/* </TabletBreakpoint> */}
                 </div>
             </div> 
         </section>
